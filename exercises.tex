@@ -1,0 +1,180 @@
+\documentclass[a4paper,11pt]{article}
+\input{preamble}
+
+\begin{document}
+\selectlanguage{english}
+\title{\textls[20]{Solutions to Tennison}}
+\author{
+  Pieter Belmans
+}
+\maketitle
+
+\tableofcontents
+
+\section{Solutions of Chapter 1}
+\begin{enumerate}
+  \item Prove that the~$\varinjlim$ of the direct systems of the examples is~$F(\emptyset)$ in each case. Generalise.
+
+    \begin{solution}
+      The direct system of a topology corresponds to a complete lattice, hence there is a minimum and a maximum: $\emptyset$ and~$X$. The direct limit now corresponds to `the object that goes to the right of everything' but in this case,~$\emptyset$ is on the right over everything, therefore, the direct limit is given by~$F(\emptyset)$.
+    \end{solution}
+
+  \item Prove directly from the definitions that if~$U$ is a direct limit of a direct system~$(U_\alpha)_{\alpha\in\Lambda}$ of sets, then~$U=\bigcup_{\alpha\in\Lambda}\Image(U_\alpha\rightarrow U)$.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item
+    \begin{enumerate}
+      \item Interpret and prove: a set is the direct limit of its finite subsets.
+      
+        \begin{solution}
+          The construction of the direct limit consists of quotienting the disjoint union. All elements of the set~$U$ are represented in a finite subset (for instance the singletons), so the disjoint union contains all elements. Elements are now identified if they are identified in the power set lattice of~$U$, but as the union of two finite subsets is still finite the identification of an element~$v\in U_\alpha,U_\beta$ occurs in~$U_\gamma=U_\alpha\cup U_\beta$.
+        \end{solution}
+
+      \item Interpret and prove: an abelian group is the direct limit of iets finitely generated subgroups.
+
+        \begin{solution}
+          Analogously, finitely generated subgroups are represented in the same kind of lattice structure with atoms and finite unions of generators. 
+        \end{solution}
+
+      \item Can you obtain~$\mathbb{Z}$ as a direct limit of finite abelian groups?
+
+        \begin{solution}
+          TODO
+        \end{solution}
+    \end{enumerate}
+
+  \item
+    \begin{enumerate}
+      \item Characterise direct systems of sets with~$\varinjlim=\emptyset$.
+
+        \begin{solution}
+          TODO
+        \end{solution}
+
+      \item Produce an interesting direct system of abelian groups with~$\varinjlim=\left\{ 0 \right\}$, the trivial group. Characterise such systems.
+
+        \begin{solution}
+          TODO
+        \end{solution}
+    \end{enumerate}
+
+  \item What can you say about the direct limit of a direct system all of whose maps are injective? Surjective?
+
+    \begin{solution}
+      All the maps to the direct limit are injective (or surjective). In the injective case the direct limit contains information on~\emph{all} objects of the direct system, in the surjective case the direct limit contains the~\emph{common} information of all objects.
+    \end{solution}
+
+  \item For~$n\in\mathbb{N}_0$, let~$C_n(x)$ denote a cyclic group of order~$n$ with generator~$x$. Let~$p\in\mathbb{N}$ be a prime number. Let~$G$ be the direct limit of the following direct system of abelian groups:
+    \begin{equation}
+      \left\{ 0 \right\}=C_{p^0}(x_0)\rightarrow C_{p^1}(x_1)\rightarrow\ldots\rightarrow C_{p^n}(x_n)\rightarrow C_{p^{n+1}}(x_{n+1})\rightarrow\ldots
+    \end{equation}
+    (where~$C_{p^n}(x_n)\rightarrow C_{p^{n+1}}(x_{n+1})$ takes~$x_n\mapsto px_{n+1}$). Preferably without resorting to the explicit construction prove:
+    \begin{enumerate}
+      \item $G$ is infinite, but torsion (\ie~element has finite order).
+
+        \begin{solution}
+          Based on the previous exercise we realize that~$G$ is a big structure as every map is injective. As every step in the chain adds a finite number of elements and there are countable steps, we obtain a countable infinite group.
+
+          As the construction of the direct limit consists of summing all objects of the direct system and taking a quotient, we get that every element of the direct sum has finite order (namely the order of the highest term) and the quotient keeps this structure.
+        \end{solution}
+
+      \item Every finitely-generated subgroup of~$G$ is finite. Find all of them.
+
+        \begin{solution}
+          Every finite set of generators has a maximal index~$n$ such that the term for~$C_{p^n}$ is nonzero but for~$C_{p^{n+1}}$ is zero. The order of the finitely-generated subgroup is now limited by the order~$p^n$.
+        \end{solution}
+    \end{enumerate}
+
+    Deduce that~$G$ has no proper infinite subgroup, and no maximal proper subgroup. Can either of these situations arise for subspaces of a vector space (using dimension instead of order)? Identify a realisation of~$G$ inside the unit circle~$S^1\subseteq\mathbb{C}$ (under multiplication).
+
+    \begin{solution}
+      The construction of the direct sum learns us that there must be an infinite number of nonzero summands, but as every~$C_{p^n}$ is trivially embedded in~$C_{p^m}$ for all~$m>n$ and every such instance is identified we cannot get to a proper infinite subgroup. Analogously there is no maximal proper subgroup.
+
+      The only interesting case occurs in infinite-dimensional vector spaces, the finite-dimensional case is trivial (take the quotient of the space with the field).
+
+      TODO
+
+      The obtained structure is the Pr\"ufer group.
+    \end{solution}
+
+  \item Consider the following direct system of abelian groups: fix~$r\in\mathbb{Z}$; for all~$n\in\mathbb{N}$ let~$U_n=\mathbb{Z}$ and for~$n\geq m$ let~$\rho_{m,n}\colon U_m\to U_n$ be multiplication by~$r^{n-m}$. Identify the~$\varinjlim$ as a subring of~$\mathbb{Q}$.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item Interpet and prove: the direct limit of a system of exact sequences is exact.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item The notions of target and direct limit can be formulated without the restriction (a) of Definitions~3.1 and~3.11. What difference does this make to the constructions? Find a system of abelian groups (in this generalised sense) with direct limit~$A\oplus B$ without having this abelian group appear in the system. Justify Remark~3.21.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item Formulate the dual notions of inverse system and inverse limit~$\varprojlim$ (reverse the arrows).
+
+    \begin{solution}
+      TODO
+    \end{solution}
+    
+    Find inverse systems:
+    \begin{enumerate}
+      \item of finite sets whose~$\varprojlim$ is infinite;
+
+        \begin{solution}
+          Take~$(\mathbb{N},\leq)$ and define~$A_k=\left\{ 0,\ldots,k \right\}$. We get~$\rho_{i,j}\colon A_j\to A_i$ the projection for~$i\leq j$. The direct limit is the set~$\mathbb{N}$.
+        \end{solution}
+
+      \item of finite abelian groups whose~$\varprojlim$ is infinite;
+
+        \begin{solution}
+          The ring of $p$\nobreakdash-adic integers~$\mathbb{Z}_p$ is given by~$\varprojlim\mathbb{Z}/p^n\mathbb{Z}$.
+        \end{solution}
+
+      \item of abelian groups whose~$\varprojlim$ is~$\mathbb{Z}$ (without~$\mathbb{Z}$ in the system).
+
+        \begin{solution}
+          Start from~$\mathbb{Q}$. Let~$p_n$ denote the~$n$th prime number. Now define~$G_k$ to be the subgroup of~$\mathbb{Q}$ in which all primes but~$p_1,\ldots,p_n$ are allowed as factors of the denumerator. The morphisms are the injections. Now~$\mathbb{Z}$ is the inverse limit, it being the subgroup of~$\mathbb{Q}$ in which all prime factors of denumerators are removed.
+        \end{solution}
+    \end{enumerate}
+
+  \item Verify that if~$(R_\alpha)_{\alpha\in\Lambda}$ is a direct system of abelian groups such that each~$R_\alpha$ is a ring and all the~$\rho_{\alpha,\beta}$ are ring morphisms, then~$\varinjlim R_\alpha$ has a natural ring structure such that all the maps~$R_\beta\to\varinjlim R_\alpha$ are ring morphisms.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item What are the stalks of the presheaf~$P_2$ of~2.E?
+
+    \begin{solution}
+      We have~$(P_2)_{x_0}=\mathbb{Z}$ as every open subset~$U$ containing~$x_0$ has~$P_2(U)=\mathbb{Z}$, with~$\rho_{\alpha,\beta}=\identity_{\mathbb{Z}}$ in the direct system.
+
+      For~$(P_2)_{x}$ with~$x\neq x_0$ we get~$\left\{ 0 \right\}$, the trivial group. We have~$|x-x_0|=\epsilon>0$, so for the open set~$B(x,\epsilon)\cap[0,1]$ the presheaf gives~$\left\{ 0 \right\}$, all values of the presheaf from there on are the same trivial group.
+    \end{solution}
+
+  \item Construct a topological space~$X$ and a presheaf~$F$ of abelian groups on~$X$ with the properties:
+    \begin{enumerate}
+      \item for any open~$U\subseteq X$: $F(U)\neq\left\{ 0 \right\}$;
+      \item for all~$x\in X$ the stalk~$F_x=\left\{ 0 \right\}$.
+    \end{enumerate}
+    If you cannot, prove that it is impossible. Compare with~4(b).
+
+    \begin{solution}
+      An interesting case with non-abelian groups\footnote{Is this a form of non-abelian sheaf theory?} would be to take~$X=[0,1]$ and assign to an open subset~$U$ the permutation on its elements. The direct limit is now the permutation on a single element, hence the trivial group.
+
+      TODO
+    \end{solution}
+
+\end{enumerate}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+
+\end{document}
