@@ -223,19 +223,47 @@
       TODO
     \end{solution}
 
-    Compare~\ref{exercise:2-4} and~\P~3.8.
+    Compare~\ref{exercise:2-4} and~\P3.8.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item Let~$F$ be a sheaf on a space~$X$ with sheaf space~$\ShfSpace(F)\overset{p}{\rightarrow} X$, and let~$A$ be a subspace of~$X$. We ca define the set (or abelian group) of sections of~$F$ over~$A$ by
+    \begin{align}
+      \sections(A,F)&=\sections(A,\Shf(F)) \\
+      &=\left\{ \text{sections of the continuous map $p^{-1}(A)\overset{p}{\rightarrow}A$} \right\}.
+    \end{align}
+    Show that we can define~$\sections(A,F)$ in terms of~$F$ alone as~$\sections(A,F)=\varinjlim\sections(U,F)$ where the direct limit is taken over the set of open subsets~$U$ of~$X$ such that~$U\supseteq A$. (Colloquially, this says that a section of~$F$ over~$A$ extends uniquely into a small neighbourhood of~$A$.)
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item Let~$F$ be a sheaf on a space~$X$ and let~$(M_i)_{i\in I}$ be a locally finite covering of~$X$ by closed sets (so that for each~$x\in X$, $\left\{ i\in I\,|\,x\in M_i \right\}$ is finite). In the notation of~\ref{exercise:2-4}, suppose we are given a family~$(s_i)_{i\in I}$ with~$\forall i\in I\colon s_i\in\sections(M_i,F)$ and~$\forall i,j\in I\colon s_i=s_j$ on~$M_i\cap M_j$.
+
+    Show that there is a unique~$s\in\sections(X,F)$ with~$\forall i\in I\colon s=s_i$ on~$M_i$.
 
     \begin{solution}
       TODO
     \end{solution}
 
   \item TODO
-
-  \item TODO
-
-  \item TODO
 \end{enumerate}
 
+
+\subsection{Solutions to Chapter 3}
+\begin{enumerate}
+  \item Let~$P$ be the category of pointed sets, whose objects are the pairs~$(A,a)$ with~$a\in A\in\Ob(\Sets)$, and whose morphisms $(A,a)\to(B,b)$ are the maps of sets~$f\colon A\to B$ such that~$f(a)=b$. Show that~$P$ is a category with a zero object, kernels and cokernels, but in which not every epimorphism is a cokernel.
+
+    \begin{solution}
+      Every singleton set~$(\left\{ x \right\},x)$ is a zero object. The initial object~$\emptyset$ from~$\Sets$ is now changed to~$(\left( x \right),x)$ as every morphism needs to map the base point. The terminal object~$\left\{ x \right\}$ in~$\Sets$ remains unchanged as it allows for exactly one morphism (which preserves the base point).
+
+      For kernels and cokernels we need a zero morphism, which in this case is the projection on the base point. For~$f\colon(A,a)\to(B,b)$ we have~$\Ker(f)=(f^{-1}(b),a)$ and~$\Coker(f)=(f(A),b)$.
+
+      TODO
+    \end{solution}
+\end{enumerate}
 
 \bibliographystyle{alpha}
 \bibliography{bibliography}
