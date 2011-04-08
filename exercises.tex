@@ -171,8 +171,71 @@
 
       TODO
     \end{solution}
-
 \end{enumerate}
+
+
+\section{Solutions to Chapter 2}
+\begin{enumerate}
+  \item Let~$I=[0,1]\hookrightarrow\mathbb{R}$. Show that there is a unique (up to isomorphism) sheaf~$F$ on~$I$ with stalks: $F_0=F_1=\mathbb{Z}$, $F_x=\left\{ 0 \right\}$ if~$x\in I\setminus\left\{ 0,1 \right\}$.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    What is~$\Shf(I, F)$?
+
+    \begin{solution}
+      It is~$\mathbb{Z}\oplus\mathbb{Z}$, as it is composed of contributions of the stalks in~$0$ and~$1$.
+    \end{solution}
+
+    Let~$G$ be the constant sheaf~$\mathbb{Z}$ on~$I$. How many morphisms are there from~$F$ to~$G$? From~$G$ to~$F$?
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item Show that the following conditions are equivalent for a topological space~$X$:
+    \begin{enumerate}
+      \item\label{exercise:2-2-a} $X$ is locally connected (that is, each point has a base of connected neighbourhoods);
+      \item\label{exercise:2-2-b} for any set~$A$, the constant sheaf~$A_X$ has~$\Gamma(U,A_X)=\prod_{t\in U'}A$ for~$U$ open in~$A$ where~$U'$ is the set of connected components of~$U$;
+      \item\label{exercise:2-2-c} \ref{exercise:2-2-b} holds for~$A=\left\{ 0,1 \right\}$, some set with two elements.
+    \end{enumerate}
+
+    \begin{solution}
+      \begin{description}
+        \item[$\ref{exercise:2-2-a}\Rightarrow\ref{exercise:2-2-b}$] This is implied by the glueing condition for sheaves.
+        \item[$\ref{exercise:2-2-b}\Rightarrow\ref{exercise:2-2-c}$] Trivial.
+        \item[$\ref{exercise:2-2-c}\Rightarrow\ref{exercise:2-2-a}$] TODO
+      \end{description}
+    \end{solution}
+
+    When these conditions hold, what are the restriction maps in terms of the representation given in~\ref{exercise:2-2-b}?
+
+    \begin{solution}
+      The restrictions are projections on the remaining connected components. For~$V\subseteq U$ open we have the inclusion~$V'\subseteq U'$ of sets of connected components.
+    \end{solution}
+
+  \item Let~$F$ be a presheaf on a space~$X$, and let~$V$ be open in~$X$. Then we can define a presheaf~$F|_V$ on~$V$ by the same recipe as~$F$; that is~$(F|_V)(U)=F(U)$ for~$U$ open in~$V$.
+
+    Show that is~$F$ is a sheaf, so is~$F|_V$. Show also that if~$F$ has sheaf space~$p\colon \ShfSpace(F)\to X$, then~$F|_V$ has sheaf space $(p^{-1}(V),p|_{p^{-1}(V)})$. What can you say when~$V$ is not open?
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    Compare~\ref{exercise:2-4} and~\P~3.8.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+  \item TODO
+
+  \item TODO
+
+  \item TODO
+\end{enumerate}
+
 
 \bibliographystyle{alpha}
 \bibliography{bibliography}
