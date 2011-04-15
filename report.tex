@@ -45,8 +45,38 @@ Al deze invarianten hebben ook een lokale varianten, waarbij er enkel wordt geke
 Al deze invarianten vinden hun oorsprong binnen de analytische topologie. Maar door een goede vertaling van de topologie naar algebra te maken zullen we in staat zijn om een nieuwe klasse van topologische invarianten aan te boren. Zo komen we tot de \emph{algebra\"ische topologie}.
 
 \subsection{Homotopie}
+Hierbij zijn we ge\"interesseerd in de continue deformaties van continue functies tussen twee topologische ruimten naar elkaar. Als zo'n deformatie (die we een \emph{homotopie} zullen noemen) mogelijk is, zijn de functies in een bepaald aspect gelijk aan elkaar. Formeel:
+
+\begin{definition}
+  Een \emph{homotopie} voor~$f,g\colon X\to Y$ met~$f,g$ continu en~$X,Y$ topologische ruimten is een continue afbeelding~$H\colon X\times[0,1]\to Y$ zodat~$H(x,0)=f(x)$ en~$H(x,1)=g(x)$.
+\end{definition}
+
+Algebra\"ische topologie heeft geen alleenrecht op de notie van homotopie, maar veel concepten binnen de algebra\"ische topologie zullen invariant zijn voor homotopie. Het maakt dus niet uit welke functie we kiezen zolang ze maar homotoop zijn aan elkaar. In~\cref{subsection:homology-and-cohomology} zien we invarianten die gelijk zijn voor homotope ruimten, maar eerst bespreken we de homotopiegroepen.
+
+In de cursus Analytische topologie zagen we reeds de notie van fundamentaalgroep. Hiermee werd de verzameling van alle klassen van lussen in een basispunt~$x_0$ van een topologische ruimte~$X$ bedoeld. Op basis hiervan kunnen we zeggen of lussen al dan niet samentrekbaar in de ruimte. Formeel:
+
+\begin{definition}
+  Uit de verzameling van \emph{lussen}~$f\colon[0,1]\to X$ met~$f(0)=f(1)=x_0$ delen we de equivalentierelatie die ge\"induceerd wordt door homotopie weg. Hierop zetten we vervolgens het product van klassen door~$[f]\ast [g]$ te defini\"eren voor representanten~$f$ en~$g$ als
+  \begin{equation}
+    f\ast g=
+      \begin{cases}
+        f(2t) & t\in\left[0,\frac{1}{2}\right] \\
+        g(2t-1) & t\in\left[\frac{1}{2},1\right]
+      \end{cases}
+  \end{equation}
+  en het is aan te tonen dat~$[f\ast g]$ onafhankelijk is van de keuze van representanten.
+
+  Het bekomen object is \emph{de fundamentaalgroep~$\fundamental_1(X,x_0)$} van~$X$ in het punt~$x_0$.
+\end{definition}
+
+We associ\"eren we dus aan een topologische ruimte (of algemener: een object binnen een categorie) een algebra\"isch object (of algemener: een veelal simpeler object in een andere categorie) dat nog steeds voldoende informatie bevat over het oorspronkelijke object om hier zinnige uitspraken over te kunnen doen. In de taal van categorie\"en: een functor.
+
+\begin{example}
+  
+\end{example}
 
 \subsection{Homologie en cohomologie}
+\label{subsection:homology-and-cohomology}
 
 
 \section{Bettigetallen en schoofcohomologie}
