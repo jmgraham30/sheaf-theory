@@ -80,6 +80,8 @@ We associ\"eren we dus aan een topologische ruimte (of algemener: een object bin
       Er kan bewezen worden dat de fundamentaalgroep van het product van topologische ruimten het product is van de fundamentaalgroepen van de componenten. Bijgevolg is~$\fundamental(\torus^n,x_0)=\prod_{i=1}^n\mathbb{Z}$.
 
     \item Voor~$\sphere^n$ met~$n\geq 2$ kunnen we echter aantonen dat lussen terug samentrekbaar worden: voor de bol~$\sphere^2$ is dit intu\"itief duidelijk omdat er geen obstakels in de weg zitten van zo'n contractie. Bijgevolg is~$\fundamental(\sphere^n,x_0)=\left\{ e \right\}$ voor~$n\geq 2$.
+
+    \item De fles van Klein heeft in tegenstelling tot de vorige voorbeelden geen commutatieve fundamentaalgroep:~$\fundamental(K,x_0)=\Dih_{\infty}$, de symmetriegroep van~$\mathbb{Z}$ voortgebracht door~$a\colon n\mapsto n+1$ en~$b\colon n\mapsto -n$. Net zoals de symmetriegroepen van de een regelmatige~$n$\nobreakdash-hoek is deze groep niet-commutatief. 
   \end{enumerate}
 \end{example}
 
@@ -106,9 +108,10 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
 
   Op basis van de stelling van Hurewicz die homologie en homotopie met elkaar in verband brengt is het mogelijk om aan te tonen dat~$\homotopyGroup_n(\sphere^n,x_0)=\mathbb{Z}$. Verder geldt dat~$\homotopyGroup_n(\sphere^{n+k},x_0)=\left\{ e \right\}$ voor~$k\geq 1$.
 
-  Het zijn dus de gevallen~$\homotopyGroup_{n+k}(\sphere^n,x_0)$ voor~$k\geq 1$ die interessant zullen blijken. TODO
+  Het zijn dus de gevallen~$\homotopyGroup_{n+k}(\sphere^n,x_0)$ voor~$k\geq 1$ die interessant zullen blijken. Bijvoorbeeld~$\homotopyGroup_3(\sphere^2,x_0)=\mathbb{Z}$, op basis van een afbeelding genaamd de Hopf{}fibratie. Zoals de fundamentaalgroep van de cirkel de hele groep werd voortgebracht door een enkele lus, die een aantal keer (in een bepaalde richting) doorlopen kon worden, brengt de Hopf{}fibratie heel~$\homotopyGroup_3(\sphere^2,x_0)$ voort.
+  
+  Dit resultaat suggereert dat homotopiegroepen steeds~$\mathbb{Z}$ zijn. Maar er kan aangetoond worden dat~$\homotopyGroup_4(\sphere^2,x_0)=\homotopyGroup_4(\sphere^3,x_0)=\mathbb{Z}/2\mathbb{Z}$, een eindige groep zowaar. De enige regelmaat die er is bestaat uit het feit dat de hogere homotopiegroepen steeds commutatief zijn. Maar dat~$\homotopyGroup_{14}(\sphere^4,x_0)=\mathbb{Z}/120\mathbb{Z}\times\mathbb{Z}/12\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$ is zeker geen intu\"itief resultaat. In~\cite{composition-methods} is een overzicht te vinden van de reeds bepaalde homotopiegroepen op~$\sphere^n$.
 \end{example}
-
 
 \begin{remark}
   Er bestaat ook de notie van \emph{cohomotopie}. De afbeeldingen worden simpelweg omgedraaid, dus de $n$\nobreakdash-de cohomotopiegroep~$\homotopyGroup^n(X,x_0)$ bestaat uit de klassen van~$f\colon X\to\sphere^n$. Ze zijn echter veel minder onderzocht dan homotopie en (co)homologie, daarom dat in de inleiding slechts~$3$~pijlers gesuggereerd werden\footnote{Ik had er nog nooit van gehoord totdat ik aan dit werkje begon.}. Wel interessant is dat~$\homotopyGroup^1(X,x_0)\cong\homologyGroup^1(X)$ de eerste cohomologiegroep.
@@ -116,6 +119,7 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
 
 \subsection{Homologie en cohomologie}
 \label{subsection:homology-and-cohomology}
+Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal homologie een topologische ruimte in verband brengen met een reeks van Abelse groepen of modulen.
 
 
 \section{Bettigetallen en schoofcohomologie}
