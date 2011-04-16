@@ -36,7 +36,7 @@ In het vak Analytische topologie\footnote{Eerste semester in de tweede bachelor,
 
   \item[compactheid] Overdekkingen van ruimtes kunnen ook aan bepaalde aftelbaarheidsvoorwaarden voldoen, maar vaak zullen we hier zelfs \emph{eindige} deeloverdekkingen eisen. 
 
-  \item[metriseerbaarheid] De analytische topologie is een veralgemening van de studie der metrische ruimten, bijgevolg is het ook interessant om te kunnen zeggen wanneer een ruimte homeomorf is met een metrische ruimte en dus dezelfde eigenschappen heeft. Op basis van deze metriek kunnen dan zeer sterke eigenschappen van de ruimte gebruikt worden: al de besproken klassen hebben ruwweg een ordening van zwak naar sterk en metriseerbare ruimten voldaan een sterke invarianten.
+  \item[metriseerbaarheid] De analytische topologie is ontstaan als een veralgemening van de studie der metrische ruimten, bijgevolg is het ook interessant om te kunnen zeggen wanneer een ruimte homeomorf is met een metrische ruimte en dus dezelfde eigenschappen heeft. Op basis van deze metriek kunnen dan zeer sterke eigenschappen van de ruimte gebruikt worden: al de besproken klassen hebben ruwweg een ordening van zwak naar sterk en metriseerbare ruimten voldaan een sterke invarianten.
 \end{description}
 
 Al deze invarianten hebben ook een lokale varianten, waarbij er enkel wordt gekeken naar een arbitraire omgeving van een punt. Voor interessante voorbeelden die deze topologische invarianten van elkaar scheiden verwijzen we naar~\cite{counterexamples-in-topology}.
@@ -117,8 +117,7 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
   Er bestaat ook de notie van \emph{cohomotopie}. De afbeeldingen worden simpelweg omgedraaid, dus de $n$\nobreakdash-de cohomotopiegroep~$\homotopyGroup^n(X,x_0)$ bestaat uit de klassen van~$f\colon X\to\sphere^n$. Ze zijn echter veel minder onderzocht dan homotopie en (co)homologie, daarom dat in de inleiding slechts~$3$~pijlers gesuggereerd werden\footnote{Ik had er nog nooit van gehoord totdat ik aan dit werkje begon.}. Wel interessant is dat~$\homotopyGroup^1(X,x_0)\cong\homologyGroup^1(X)$ de eerste cohomologiegroep.
 \end{remark}
 
-\subsection{Homologie en cohomologie}
-\label{subsection:homology-and-cohomology}
+\subsection{Homologie en cohomologie}\label{subsection:homology-and-cohomology}
 Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal (co)homologie een topologische ruimte in verband brengen met een reeks van abelse groepen of modulen. TODO
 
 \begin{definition}
@@ -127,21 +126,20 @@ Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal (c
 
 
 
-\section{Bettigetallen en schoofcohomologie}
-\label{section:betti-numbers}
+\section{Bettigetallen en schoofcohomologie}\label{section:betti-numbers}
 We zagen dat de abelse groep~$\homologyGroup_k(X)$ ons informatie verschaft over het aantal gaten in een topologische ruimte. We defini\"eren nu simpelweg:
 \begin{definition}
   Het~\emph{$k$\nobreakdash-de bettigetal~$\betti_k(X)$} is de rang van de groep~$\homologyGroup_k(X)$ of equivalent de dimensie van de vectorruimte~$\homologyGroup_k(X;\mathbb{Q})$.
 \end{definition}
 
-Nu lijkt deze definitie niet veel nieuwe inzichten te verschaffen, maar oorspronkelijk was homologie \emph{niet} de studie van rijen van abelse groepen. De eerste incarnatie (dat wil zeggen: door Poincar\'e, rond~1900) waren net deze bettigetallen, het inzicht dat er groepen mee geassocieerd waren heeft~$20$~jaar op zich laten wachten. Bovendien bieden deze getallen een intu\"itieve interpretatie van homologie.
+Nu lijkt deze definitie niet veel nieuwe inzichten te verschaffen, maar oorspronkelijk was homologie \emph{niet} de studie van rijen van abelse groepen. De eerste incarnatie (dat wil zeggen: door Poincar\'e, rond~1900) waren net deze bettigetallen, het inzicht dat er groepen mee geassocieerd waren heeft~$20$~jaar op zich laten wachten. Bovendien bieden deze getallen een intu\"itieve interpretatie ($\betti_k(X)$ stemt overeen met het aantal~$k$\nobreakdash-dimensionale gaten in~$X$) van homologie die we verder zullen toelichten in~\cref{example:betti-numbers}.
 
 We associ\"eren met elke topologische ruimte dus een element van~$(\mathbb{N}\cup\left\{ +\infty \right\})^\mathbb{N}$, een rij van natuurlijke getallen of~$+\infty$. Interessant is dat deze bettigetallen in veel interessante gevallen vanaf een bepaald moment~$0$~worden. Dit hangt samen met een zekere vorm van eindigdimensionaliteit: bijvoorbeeld voor compacte manifolds is dit het geval.
 
 Met een rij getallen kunnen we een een \emph{voortbrengende functie} associ\"eren door het~$n$\nobreakdash-de getal als co\"effici\"ent voor de monoom~$x^n$ te nemen. Dit leidt ons tot:
 
 \begin{definition}
-  De \emph{poincar\'eveelterm} van een topologische ruimte is de veelterm~$\sum_{n=0}^{+\infty}\betti_n x^n$.
+  De \emph{poincar\'eveelterm}~$\poincare(X)$ van een topologische ruimte~$X$ is de veelterm~$\sum_{n=0}^{+\infty}\betti_n(X) x^n$.
 \end{definition}
 
 \begin{remark}
@@ -150,14 +148,34 @@ Met een rij getallen kunnen we een een \emph{voortbrengende functie} associ\"ere
 
 In~\cref{subsection:homology-and-cohomology} kwamen geen voorbeelden aan bod\footnote{TODO klopt dit nog steeds?}, daar brengen we nu verandering in.
 \begin{example}
+  \label{example:betti-numbers}
   \begin{enumerate}
-    \item Voor de cirkel~$\sphere^1$ wordt de reeks van bettigetallen gegeven door
+    \item Voor de cirkel~$\sphere^1$ wordt de reeks van bettigetallen gegeven door~$1,1,0,0,0,\ldots$ dus de poincar\'eveelterm is simpelweg~$1+x$.
+      
+      Nu kunnen we de eerste bettigetallen interpreteren als volgt:
+      \begin{description}
+        \item[$\betti_0(X)$] geeft het aantal samenhangscomponenten van de ruimte;
+        \item[$\betti_1(X)$] geeft het aantal tweedimensionale gaten;
+        \item[$\betti_2(X)$] geeft het aantal driedimensionale gaten of leegten.
+      \end{description}
+
+      We zien dat dit van toepassing is op~$\sphere^1$: er is~$1$~samenhangscomponent en de cirkel omschrijft de open schijf, die het tweedimensionale gat vormt.
+
+    \item De $n$\nobreakdash-torus~$\torus^n$ wordt gerealiseerd als product van~$n$~cirkels~$\sphere^1$ en het is aan te tonen dat de poincar\'eveelterm van een product het product van de poincar\'eveeltermen der factoren is. We vinden dus
       \begin{equation}
-        1,1,0,0,0,\ldots
+        \poincare(\torus^n)=\prod_{i=1}^n\poincare(\sphere^1)=(1+x)^n=\sum_{k=0}^n\binom{n}{k}x^k,
+      \end{equation}
+      zodat de bettigetallen gegeven worden door
+      \begin{equation}
+        1,\binom{n}{1},\ldots,\binom{n}{n},0,0,0,\ldots
       \end{equation}
 
-  \end{enumerate}<++>
-\end{example}<++>
+      We kunnen deze omgekeerde beweging nu helemaal te voltrekken door te zeggen dat de rang van~$\homologyGroup_k(\torus^n)$ gegeven wordt door~$\binom{n}{k}$. Meer nog, er geldt dat:~$\homologyGroup_k(\torus^n)\cong\mathbb{Z}^{\binom{n}{k}}$.
+
+      Voor de intu\"itieve interpretatie in het geval~$n=2$:~$\betti_0(\torus^2)$ vertelt ons dat er~$1$~samenhangscomponent is, wat zeer duidelijk is. Verder zijn er twee~$2$\nobreakdash-dimensionale gaten: deze zijn respectievelijk het gat in de torus en de holte in het binnenste van de torus. Tot slot is er~\'e\'en~$3$\nobreakdash-dimensionaal gat: het gat middenin de torus, maar dit keer in~$3$~dimensies opgevat.
+
+  \end{enumerate}
+\end{example}
 
 
 
