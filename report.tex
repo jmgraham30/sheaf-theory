@@ -119,10 +119,48 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
 
 \subsection{Homologie en cohomologie}
 \label{subsection:homology-and-cohomology}
-Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal homologie een topologische ruimte in verband brengen met een reeks van abelse groepen of modulen.
+Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal (co)homologie een topologische ruimte in verband brengen met een reeks van abelse groepen of modulen. TODO
+
+\begin{definition}
+  Een \emph{ketencomplex} is een reeks~$(A_n,d_n)_{n\in\mathbb{Z}}$ van abelse groepen (of modulen) die aan elkaar worden geplakt met behulp van de homomorfismen~$d_n\colon A_n\to A_{n-1}$ (\emph{randoperator} genaamd\footnote{TODO afgrijselijke vertaling verbeteren}) zodat de samenstelling~$d_n\circ d_{n+1}=0$ voor elke~$n$.
+\end{definition}
+
 
 
 \section{Bettigetallen en schoofcohomologie}
+\label{section:betti-numbers}
+We zagen dat de abelse groep~$\homologyGroup_k(X)$ ons informatie verschaft over het aantal gaten in een topologische ruimte. We defini\"eren nu simpelweg:
+\begin{definition}
+  Het~\emph{$k$\nobreakdash-de bettigetal~$\betti_k(X)$} is de rang van de groep~$\homologyGroup_k(X)$ of equivalent de dimensie van de vectorruimte~$\homologyGroup_k(X;\mathbb{Q})$.
+\end{definition}
+
+Nu lijkt deze definitie niet veel nieuwe inzichten te verschaffen, maar oorspronkelijk was homologie \emph{niet} de studie van rijen van abelse groepen. De eerste incarnatie (dat wil zeggen: door Poincar\'e, rond~1900) waren net deze bettigetallen, het inzicht dat er groepen mee geassocieerd waren heeft~$20$~jaar op zich laten wachten. Bovendien bieden deze getallen een intu\"itieve interpretatie van homologie.
+
+We associ\"eren met elke topologische ruimte dus een element van~$(\mathbb{N}\cup\left\{ +\infty \right\})^\mathbb{N}$, een rij van natuurlijke getallen of~$+\infty$. Interessant is dat deze bettigetallen in veel interessante gevallen vanaf een bepaald moment~$0$~worden. Dit hangt samen met een zekere vorm van eindigdimensionaliteit: bijvoorbeeld voor compacte manifolds is dit het geval.
+
+Met een rij getallen kunnen we een een \emph{voortbrengende functie} associ\"eren door het~$n$\nobreakdash-de getal als co\"effici\"ent voor de monoom~$x^n$ te nemen. Dit leidt ons tot:
+
+\begin{definition}
+  De \emph{poincar\'eveelterm} van een topologische ruimte is de veelterm~$\sum_{n=0}^{+\infty}\betti_n x^n$.
+\end{definition}
+
+\begin{remark}
+  De poincar\'eveelterm is enkel een veelterm voor topologische ruimten waarbij de reeks bettigetallen slechts voor eindig veel waarden~$0$~is. Anders verkrijgen we een reeks.
+\end{remark}
+
+In~\cref{subsection:homology-and-cohomology} kwamen geen voorbeelden aan bod\footnote{TODO klopt dit nog steeds?}, daar brengen we nu verandering in.
+\begin{example}
+  \begin{enumerate}
+    \item Voor de cirkel~$\sphere^1$ wordt de reeks van bettigetallen gegeven door
+      \begin{equation}
+        1,1,0,0,0,\ldots
+      \end{equation}
+
+  \end{enumerate}<++>
+\end{example}<++>
+
+
+
 
 \nocite{*}
 \bibliographystyle{alpha}
