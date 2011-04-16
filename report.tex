@@ -26,7 +26,7 @@ Topologen zijn zeer ge\"interesseerd in de classificatie van topologische ruimte
 
 In het vak Analytische topologie\footnote{Eerste semester in de tweede bachelor, door prof.~dr.~Lowen} worden verschillende van deze topologische invarianten besproken:
 \begin{description}
-  \item[separatie-eigenschappen] Zoals daar zijn Hausdorff, regulier, normaal beschrijven deze invarianten in welke mate we in staat zijn om punten of deelruimten van elkaar te scheiden. 
+  \item[separatie-eigenschappen] Zoals daar zijn hausdorff, regulier, normaal beschrijven deze invarianten in welke mate we in staat zijn om punten of deelruimten van elkaar te scheiden. 
 
   \item[aftelbaarheidsvoorwaarden] Overdekkingen of (lokale) omgevingenbasissen kunnen aftelbare delen bevatten, zodat het voldoende is om slechts naar dit aftelbaar deel te kijken om alsnog algemene uitspraken te kunnen doen.
     
@@ -73,7 +73,7 @@ We associ\"eren we dus aan een topologische ruimte (of algemener: een object bin
 
 \begin{example}
   \begin{enumerate}
-    \item De fundamentaalgroep~$\fundamental(\mathbb{R}^n,x_0)$ met op~$\mathbb{R}^n$ de Euclidische topologie is voor elke~$n$ de triviale groep: elke lus kan zonder enig probleem worden teruggetrokken tot het punt~$x_0$: er zijn geen obstakels.
+    \item De fundamentaalgroep~$\fundamental(\mathbb{R}^n,x_0)$ met op~$\mathbb{R}^n$ de euclidische topologie is voor elke~$n$ de triviale groep: elke lus kan zonder enig probleem worden teruggetrokken tot het punt~$x_0$: er zijn geen obstakels.
 
     \item De fundamentaalgroep~$\fundamental(\sphere^1,x_0)$ van de cirkel~$\sphere^1$ is echter~$\mathbb{Z}$. Een lus op de cirkel komt overeen met de notie van windingsgetallen: het aantal keer dat deze rondgaat ligt vast onder homotopie.
 
@@ -81,11 +81,11 @@ We associ\"eren we dus aan een topologische ruimte (of algemener: een object bin
 
     \item Voor~$\sphere^n$ met~$n\geq 2$ kunnen we echter aantonen dat lussen terug samentrekbaar worden: voor de bol~$\sphere^2$ is dit intu\"itief duidelijk omdat er geen obstakels in de weg zitten van zo'n contractie. Bijgevolg is~$\fundamental(\sphere^n,x_0)=\left\{ e \right\}$ voor~$n\geq 2$.
 
-    \item De fles van Klein heeft in tegenstelling tot de vorige voorbeelden geen Abelse fundamentaalgroep:~$\fundamental(K,x_0)=\Dih_{\infty}$, de symmetriegroep van~$\mathbb{Z}$ voortgebracht door~$a\colon n\mapsto n+1$ en~$b\colon n\mapsto -n$. Net zoals de symmetriegroepen van de een regelmatige~$n$\nobreakdash-hoek is deze groep niet-Abels. 
+    \item De fles van Klein heeft in tegenstelling tot de vorige voorbeelden geen abelse fundamentaalgroep:~$\fundamental(K,x_0)=\Dih_{\infty}$, de symmetriegroep van~$\mathbb{Z}$ voortgebracht door~$a\colon n\mapsto n+1$ en~$b\colon n\mapsto -n$. Net zoals de symmetriegroepen van de een regelmatige~$n$\nobreakdash-hoek is deze groep niet-abels. 
   \end{enumerate}
 \end{example}
 
-We merken reeds een probleem bij~$\fundamental(\mathbb{R}^n,x_0)$ en~$\fundamental(\sphere^n,x_0)$ voor~$n\geq 2$: deze ruimten zijn duidelijk verschillend van elkaar, maar onze topologische invariant is niet in staat om hier onderscheid tussen te maken\footnote{Nu zijn er wel meerdere invarianten die hiervoor falen: beide ruimten zijn bijvoorbeeld Hausdorff. Maar compactheid daarentegen gaat enkel op voor~$\sphere^n$.}. We zullen dus een veralgemening invoeren.
+We merken reeds een probleem bij~$\fundamental(\mathbb{R}^n,x_0)$ en~$\fundamental(\sphere^n,x_0)$ voor~$n\geq 2$: deze ruimten zijn duidelijk verschillend van elkaar, maar onze topologische invariant is niet in staat om hier onderscheid tussen te maken\footnote{Nu zijn er wel meerdere invarianten die hiervoor falen: beide ruimten zijn bijvoorbeeld hausdorff. Maar compactheid daarentegen gaat enkel op voor~$\sphere^n$.}. We zullen dus een veralgemening invoeren.
 
 In plaats van lussen (die homotoop zijn met~$\sphere^1$) in een punt~$x_0$ zullen we naar sferen~$\sphere^n$ kijken en zien hoe deze zich gedragen. Bijgevolg is~$\homotopyGroup_n(X,x_0)$ de verzameling van homotopieklassen van afbeeldingen~$f\colon\sphere^n\to X$ die een basispunt op de sfeer naar~$x_0$ sturen.
 
@@ -110,7 +110,7 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
 
   Het zijn dus de gevallen~$\homotopyGroup_{n+k}(\sphere^n,x_0)$ voor~$k\geq 1$ die interessant zullen blijken. Bijvoorbeeld~$\homotopyGroup_3(\sphere^2,x_0)=\mathbb{Z}$, op basis van een afbeelding genaamd de Hopf{}fibratie. Zoals de fundamentaalgroep van de cirkel de hele groep werd voortgebracht door een enkele lus, die een aantal keer (in een bepaalde richting) doorlopen kon worden, brengt de Hopf{}fibratie heel~$\homotopyGroup_3(\sphere^2,x_0)$ voort.
   
-  Dit resultaat suggereert dat homotopiegroepen steeds~$\mathbb{Z}$ zijn. Maar er kan aangetoond worden dat~$\homotopyGroup_4(\sphere^2,x_0)=\homotopyGroup_4(\sphere^3,x_0)=\mathbb{Z}/2\mathbb{Z}$, een eindige groep zowaar. De enige regelmaat die er is bestaat uit het feit dat de hogere homotopiegroepen steeds Abels zijn. Maar dat~$\homotopyGroup_{14}(\sphere^4,x_0)=\mathbb{Z}/120\mathbb{Z}\times\mathbb{Z}/12\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$ is zeker geen intu\"itief resultaat. In~\cite{composition-methods} is een overzicht te vinden van de reeds bepaalde homotopiegroepen op~$\sphere^n$.
+  Dit resultaat suggereert dat homotopiegroepen steeds~$\mathbb{Z}$ zijn. Maar er kan aangetoond worden dat~$\homotopyGroup_4(\sphere^2,x_0)=\homotopyGroup_4(\sphere^3,x_0)=\mathbb{Z}/2\mathbb{Z}$, een eindige groep zowaar. De enige regelmaat die er is bestaat uit het feit dat de hogere homotopiegroepen steeds abels zijn. Maar dat~$\homotopyGroup_{14}(\sphere^4,x_0)=\mathbb{Z}/120\mathbb{Z}\times\mathbb{Z}/12\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$ is zeker geen intu\"itief resultaat. In~\cite{composition-methods} is een overzicht te vinden van de reeds bepaalde homotopiegroepen op~$\sphere^n$.
 \end{example}
 
 \begin{remark}
@@ -119,7 +119,7 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
 
 \subsection{Homologie en cohomologie}
 \label{subsection:homology-and-cohomology}
-Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal homologie een topologische ruimte in verband brengen met een reeks van Abelse groepen of modulen.
+Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal homologie een topologische ruimte in verband brengen met een reeks van abelse groepen of modulen.
 
 
 \section{Bettigetallen en schoofcohomologie}
