@@ -68,6 +68,9 @@
 \crefname{example}{Voorbeeld}{Voorbeelden}
 \crefname{remark}{Opmerking}{Opmerkingen}
 
+\newtheorem{exercise}{Exercise}
+\newenvironment{solution}[1][\textbf{Solution}\hspace{1em}]{#1}{\hfill\qed}
+
 % http://tug.org/pracjourn/2006-3/robertson/robertson.pdf
 \newcommand\foreign[1]{\emph{#1}}
 \newcommand\eg{\foreign{e.g.}}
@@ -82,11 +85,22 @@
 
 \newcommand\betti{\mathrm{b}}
 \newcommand\Dih{\mathrm{Dih}}
+\newcommand\eulercharacteristic{\chi}
 \newcommand\fundamental{\homotopyGroup_1}
 \newcommand\Grp{\mathsf{Grp}}
 \newcommand\homologyGroup{\mathrm{H}}
 \newcommand\homotopyGroup{\pi}
 \newcommand\poincare{\mathrm{P}}
+\newcommand\sections{\mathrm{\Gamma}}
+\newcommand\Sets{\textsf{Sets}}
+\newcommand\ShfSpace{\mathrm{L}}
+\newcommand\Shf{\mathrm{\Gamma}}
 \newcommand\sphere{\mathbb{S}}
 \newcommand\TopP{\mathsf{Top}_{\bullet}}
 \newcommand\torus{\mathbb{T}}
+
+\DeclareMathOperator\Coker{Coker}
+\DeclareMathOperator\identity{id}
+\DeclareMathOperator\Image{Im}
+\DeclareMathOperator\Ker{Ker}
+\DeclareMathOperator\Ob{Ob}
