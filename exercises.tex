@@ -174,6 +174,28 @@
 \end{enumerate}
 
 
+\chapter{Solutions to the exercises in Chapter 2}
+\begin{exercise}[1.9]
+  Show that if~$G$ is an abelian sheaf, then~$G(\emptyset)=\left\{ 0 \right\}$, the trivial group.
+
+  \begin{solution}
+    By taking the empty cover of the empty set, the first part of the sequence that corresponds to the equalizer diagram reduces to
+    \begin{equation}
+      0\to G(\emptyset)\to 0
+    \end{equation}
+    because we're taking the product over an empty set ($\Gamma=\emptyset$). Now~$G(\emptyset)$ is embedded in~$0$, and must therefore be equal to the trivial group.
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}[1.12]
+  Find an example with~$G$ not a monopresheaf where~1.10 fails.
+
+  \begin{solution}
+    Take both~$F$ and~$G$ the presheaf~$P_1$ from~Example~1.2.E. Now define~$f\colon F\to G$ to be the trivial map for~$F(U)\to G(U)$,~$U\neq X$ open and let~$f(X)\colon F(X)\to G(X):n\mapsto 2n$. Similarly,~$g(X)\colon F(X)\to G(X):n\mapsto 3n$. Now~$f$ and~$g$ agree on all stalks but as the monopresheaf fails (all restrictions are elements of the trivial group but the global behaviour differs) we have~$f\neq g$.
+  \end{solution}
+\end{exercise}
+
+
 \chapter{Solutions to the exercises at the end of Chapter 2}
 \begin{enumerate}
   \item Let~$I=[0,1]\hookrightarrow\mathbb{R}$. Show that there is a unique (up to isomorphism) sheaf~$F$ on~$I$ with stalks: $F_0=F_1=\mathbb{Z}$, $F_x=\left\{ 0 \right\}$ if~$x\in I\setminus\left\{ 0,1 \right\}$.
