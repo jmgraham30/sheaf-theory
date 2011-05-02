@@ -132,7 +132,7 @@ We zagen dat de abelse groep~$\homologyGroup_k(X)$ ons informatie verschaft over
   Het~\emph{$k$\nobreakdash-de bettigetal~$\betti_k(X)$} is de rang van de groep~$\homologyGroup_k(X)$ of equivalent de dimensie van de vectorruimte~$\homologyGroup_k(X;\mathbb{Q})$.
 \end{definition}
 
-Nu lijkt deze definitie niet veel nieuwe inzichten te verschaffen, maar oorspronkelijk was homologie \emph{niet} de studie van rijen van abelse groepen. De eerste incarnatie (dat wil zeggen: door Poincar\'e, rond~1900) waren net deze bettigetallen, het inzicht dat er groepen mee geassocieerd waren heeft~$20$~jaar op zich laten wachten. Bovendien bieden deze getallen een intu\"itieve interpretatie ($\betti_k(X)$ stemt overeen met het aantal~$k$\nobreakdash-dimensionale gaten in~$X$) van homologie die we verder zullen toelichten in~\cref{example:betti-numbers}.
+Nu lijkt deze definitie niet veel nieuwe inzichten te verschaffen, maar oorspronkelijk was homologie \emph{niet} de studie van rijen van abelse groepen. De eerste incarnatie (dat wil zeggen: door Poincar\'e, rond~1900) waren net deze bettigetallen, het inzicht dat er groepen mee geassocieerd waren heeft~$20$~jaar op zich laten wachten. Bovendien bieden deze getallen een intu\"itieve interpretatie (want $\betti_k(X)$ stemt overeen met het aantal~$k$\nobreakdash-dimensionale gaten in~$X$) van homologie die we verder zullen toelichten in~\cref{example:betti-numbers}.
 
 We associ\"eren met elke topologische ruimte dus een element van~$(\mathbb{N}\cup\left\{ +\infty \right\})^\mathbb{N}$, een rij van natuurlijke getallen of~$+\infty$. Interessant is dat deze bettigetallen in veel interessante gevallen vanaf een bepaald moment~$0$~worden. Dit hangt samen met een zekere vorm van eindigdimensionaliteit: bijvoorbeeld voor compacte manifolds is dit het geval.
 
@@ -146,8 +146,8 @@ Met een rij getallen kunnen we een een \emph{voortbrengende functie} associ\"ere
   De poincar\'eveelterm is enkel een veelterm voor topologische ruimten waarbij de reeks bettigetallen slechts voor eindig veel waarden~$0$~is. Anders verkrijgen we een reeks.
 \end{remark}
 
-In~\cref{subsection:homology-and-cohomology} kwamen geen voorbeelden aan bod\footnote{TODO klopt dit nog steeds?}, daar brengen we nu verandering in.
-\begin{example}
+In~Hoofdstuk~\ref{subsection:homology-and-cohomology} kwamen geen voorbeelden aan bod\footnote{TODO klopt dit nog steeds?}, daar brengen we nu verandering in.
+\begin{example} \hfil
   \label{example:betti-numbers}
   \begin{enumerate}
     \item Voor de cirkel~$\sphere^1$ wordt de reeks van bettigetallen gegeven door~$1,1,0,0,0,\ldots$ dus de poincar\'eveelterm is simpelweg~$1+x$.
@@ -161,7 +161,7 @@ In~\cref{subsection:homology-and-cohomology} kwamen geen voorbeelden aan bod\foo
 
       We zien dat dit van toepassing is op~$\sphere^1$: er is~$1$~samenhangscomponent en de cirkel omschrijft de open schijf, die het tweedimensionale gat vormt.
 
-    \item De $n$\nobreakdash-torus~$\torus^n$ wordt gerealiseerd als product van~$n$~cirkels~$\sphere^1$ en het is aan te tonen dat de poincar\'eveelterm van een product het product van de poincar\'eveeltermen der factoren is. We vinden dus
+    \item De $n$\nobreakdash-torus~$\torus^n$ wordt gerealiseerd als product van~$n$~cirkels~$\sphere^1$ en het is aan te tonen met behulp van de stelling van K\"unneth dat de poincar\'eveelterm van een product het product van de poincar\'eveeltermen der factoren is. We vinden dus
       \begin{equation}
         \poincare(\torus^n)=\prod_{i=1}^n\poincare(\sphere^1)=(1+x)^n=\sum_{k=0}^n\binom{n}{k}x^k,
       \end{equation}
@@ -172,14 +172,49 @@ In~\cref{subsection:homology-and-cohomology} kwamen geen voorbeelden aan bod\foo
 
       We kunnen deze omgekeerde beweging nu helemaal te voltrekken door te zeggen dat de rang van~$\homologyGroup_k(\torus^n)$ gegeven wordt door~$\binom{n}{k}$. Meer nog, er geldt dat:~$\homologyGroup_k(\torus^n)\cong\mathbb{Z}^{\binom{n}{k}}$.
 
-      Voor de intu\"itieve interpretatie in het geval~$n=2$:~$\betti_0(\torus^2)$ vertelt ons dat er~$1$~samenhangscomponent is, wat zeer duidelijk is. Verder zijn er twee~$2$\nobreakdash-dimensionale gaten: deze zijn respectievelijk het gat in de torus en de holte in het binnenste van de torus. Tot slot is er~\'e\'en~$3$\nobreakdash-dimensionaal gat: het gat middenin de torus, maar dit keer in~$3$~dimensies opgevat.
+      Voor de intu\"itieve interpretatie in het geval~$n=2$:~$\betti_0(\torus^2)$ vertelt ons dat er~$1$~samenhangscomponent is, wat duidelijk is. Verder zijn er twee~$2$\nobreakdash-dimensionale gaten: deze zijn respectievelijk het gat in de torus en de holte in het binnenste van de torus. Tot slot is er~\'e\'en~$3$\nobreakdash-dimensionaal gat: het gat middenin de torus, maar dit keer in~$3$~dimensies opgevat.
       
-    \item TODO
+    \item Totnogtoe waren de bettigetallen na een bepaald punt constant nul. Dit kwam overeen met een zekere notie van eindigdimensionaliteit. Als we echter onze blik richten op de oneindigdimensionale complexe projectieve ruimte~$\mathbb{C}\mathbb{P}^{\infty}$ vinden
+      \begin{equation}
+        1,0,1,0,\ldots
+      \end{equation}
+      als reeks van bettigetallen. De poincar\'eveelterm is in dit geval een reeks.
 
+      In het algemeen geldt er voor~$n\in\mathbb{N}\setminus\left\{ 0 \right\}$ dat de even homologiegroepen voor de eindigdimensionale complexe projectieve ruimten~$\mathbb{C}\mathbb{P}^n$ gegeven zijn door~$\homologyGroup_{2k}(\mathbb{C}\mathbb{P}^n,\mathbb{Z})\cong\mathbb{Z}$ voor~$2k\leq n$. Voor alle andere~$k$ geldt echter dat~$\homologyGroup_{k}(\mathbb{C}\mathbb{P}^n,\mathbb{Z})=0$.
   \end{enumerate}
 \end{example}
 
-Tot slot kunnen we nog de eulerkarakteristiek defini\"eren. Herinner dat voor een platonisch lichaam we hadden aangetoond dat TODO
+Tot slot kunnen we nog de eulerkarakteristiek defini\"eren. Herinner dat voor een platonisch lichaam we hadden aangetoond dat
+\begin{equation}
+  \chi=V-E+F=2
+\end{equation}
+waarbij~$V$ het aantal vertices,~$E$ het aantal edges en~$F$ het aantal faces is. Algemeen geldt dit voor elke convexe veelhoek.
+
+Nu hebben deze veelhoeken een zeer belangrijke veralgemening naar de wereld van homologie: de zogeheten \emph{CW\nobreakdash-complexen}. We gaan onze topologische ruimte van extra structuur voorzien via cellen. Deze gaan we vervolgens aan elkaar plakken, zodat de hele ruimte zo beschreven wordt.
+
+\begin{definition}
+  Een~\emph{$n$-dimensionale gesloten cel} is een topologische ruimte die homeomorf is met een~$n$-dimensionale gesloten bol\footnote{Dus niet zomaar~$\sphere^n$, maar ook de rand.}. Analoog is een \emph{$n$\nobreakdash-dimensionale open cel} een topologische ruimte die homeomorf is met een~$n$-dimensionale open bol.
+\end{definition}
+
+\begin{remark}
+  Een~$0$\nobreakdash-dimensionale open (maar ook gesloten) cel is een singleton.
+\end{remark}
+
+\begin{definition}
+  Een~\emph{CW\nobreakdash-complex} is een hausdorffruimte~$X$ met een partitie van~$X$ in open cellen zodat
+  \begin{enumerate}
+    \item voor elke~$n$\nobreakdash-dimensionale open cel~$C$ in de partitie van~$X$ er een continue afbeelding~$f$ van de gesloten~$n$\nobreakdash-dimensionale bal naar~$X$ bestaat waarbij
+      \begin{itemize}
+        \item de restrictie van~$f$ tot het inwendige van de gesloten bal een homeomorfisme is met de cel~$C$,
+        \item het beeld van de rand van de gesloten bal is vervat in de eindige unie van verzamelingen van de partitie, waarbij elk deel een dimensie strikt lager dan~$n$ heeft;
+      \end{itemize}
+    \item een deel van~$X$ is gesloten als en slechts als de sluiting van elke cel in een gesloten deelruimte ontmoet wordt.
+  \end{enumerate}
+\end{definition}
+
+
+
+Dit verklaart ook de naam van de CW\nobreakdash-complexen: we werken met een \emph{closure-finite} structuur in een \emph{weak topology}.
 
 \begin{definition}
   De \emph{eulerkarakteristiek}~$\eulercharacteristic(X)$ is gedefinieerd als
