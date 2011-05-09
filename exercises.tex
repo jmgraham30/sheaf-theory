@@ -222,38 +222,48 @@
     \begin{enumerate}
       \item\label{exercise:2-2-a} $X$ is locally connected (that is, each point has a base of connected neighbourhoods);
       \item\label{exercise:2-2-b} for any set~$A$, the constant sheaf~$A_X$ has~$\Gamma(U,A_X)=\prod_{t\in U'}A$ for~$U$ open in~$A$ where~$U'$ is the set of connected components of~$U$;
-      \item\label{exercise:2-2-c} \ref{exercise:2-2-b} holds for~$A=\left\{ 0,1 \right\}$, some set with two elements.
+      \item\label{exercise:2-2-c} $\ref{exercise:2-2-b}$ holds for~$A=\left\{ 0,1 \right\}$, some set with two elements.
     \end{enumerate}
 
     \begin{solution}
       \begin{description}
-        \item[$\ref{exercise:2-2-a}\Rightarrow\ref{exercise:2-2-b}$] This is implied by the glueing condition for sheaves.
-        \item[$\ref{exercise:2-2-b}\Rightarrow\ref{exercise:2-2-c}$] Trivial.
-        \item[$\ref{exercise:2-2-c}\Rightarrow\ref{exercise:2-2-a}$] TODO
+        \item[$\ref{exercise:2-2-a}\Rightarrow\ref{exercise:2-2-b}$] We have that
+          \begin{equation}
+            \sections(U,A_X)=\left\{ \text{locally constant functions~$U\to A$} \right\}
+          \end{equation}
+          and as any covering of~$U$ falls apart in disjoint coverings of every connected component of~$U$ we obtain~$\prod_{t\in U'}A$.
+        \item[$\ref{exercise:2-2-b}\Rightarrow\ref{exercise:2-2-c}$] Trivial specialization.
+        \item[$\ref{exercise:2-2-c}\Rightarrow\ref{exercise:2-2-a}$] As~$\sections(U,\left\{ 0,1 \right\}_X)=\prod_{t\in U'}\left\{ 0,1 \right\}$ we obtain a notion of indicator functions. They determine uniquely to which connected components an open subset of~$U$ belongs.
       \end{description}
     \end{solution}
 
-    When these conditions hold, what are the restriction maps in terms of the representation given in~\ref{exercise:2-2-b}?
+    When these conditions hold, what are the restriction maps in terms of the representation given in~$\ref{exercise:2-2-b}$?
 
     \begin{solution}
-      The restrictions are projections on the remaining connected components. For~$V\subseteq U$ open we have the inclusion~$V'\subseteq U'$ of sets of connected components.
+      The restrictions are projections on the remaining components. For~$V\subseteq U$ open we have the inclusion~$V'\subseteq U'$ of sets of connected components.
     \end{solution}
 
   \item Let~$F$ be a presheaf on a space~$X$, and let~$V$ be open in~$X$. Then we can define a presheaf~$F|_V$ on~$V$ by the same recipe as~$F$; that is~$(F|_V)(U)=F(U)$ for~$U$ open in~$V$.
 
-    Show that is~$F$ is a sheaf, so is~$F|_V$. Show also that if~$F$ has sheaf space~$p\colon \ShfSpace(F)\to X$, then~$F|_V$ has sheaf space $(p^{-1}(V),p|_{p^{-1}(V)})$. What can you say when~$V$ is not open?
+    Show that is~$F$ is a sheaf, so is~$F|_V$.
+
+    \begin{solution}
+      Intersecting an open covering with an open set~$V$ leads to an open covering of this set in~$V$ \emph{in the topology on~$X$}. Now the conditions for the sheaf on~$V$ trivially hold because they hold in~$X$.
+    \end{solution}
+
+    Show also that if~$F$ has sheaf space~$p\colon \ShfSpace(F)\to X$, then~$F|_V$ has sheaf space $(p^{-1}(V),p|_{p^{-1}(V)})$. What can you say when~$V$ is not open?
+
+    \begin{solution}
+      The projection map~$p$ must be restricted to~$p^{-1}(V)$ as the corresponding sheaf acts on~$V$. Now Lemma~3.5(b) provides the necessary conditions, as intersections of open sets are open.
+    \end{solution}
+
+    Compare Exercise~\ref{exercise:2-4} and~\P3.8.
 
     \begin{solution}
       TODO
     \end{solution}
 
-    Compare~\ref{exercise:2-4} and~\P3.8.
-
-    \begin{solution}
-      TODO
-    \end{solution}
-
-  \item Let~$F$ be a sheaf on a space~$X$ with sheaf space~$\ShfSpace(F)\overset{p}{\rightarrow} X$, and let~$A$ be a subspace of~$X$. We ca define the set (or abelian group) of sections of~$F$ over~$A$ by
+  \item\label{exercise:2-4} Let~$F$ be a sheaf on a space~$X$ with sheaf space~$\ShfSpace(F)\overset{p}{\rightarrow} X$, and let~$A$ be a subspace of~$X$. We ca define the set (or abelian group) of sections of~$F$ over~$A$ by
     \begin{align}
       \sections(A,F)&=\sections(A,\Shf(F)) \\
       &=\left\{ \text{sections of the continuous map $p^{-1}(A)\overset{p}{\rightarrow}A$} \right\}.
@@ -261,18 +271,47 @@
     Show that we can define~$\sections(A,F)$ in terms of~$F$ alone as~$\sections(A,F)=\varinjlim\sections(U,F)$ where the direct limit is taken over the set of open subsets~$U$ of~$X$ such that~$U\supseteq A$. (Colloquially, this says that a section of~$F$ over~$A$ extends uniquely into a small neighbourhood of~$A$.)
 
     \begin{solution}
-      TODO
+      A section over~$A$ is a section for~$p\colon p^{-1}(A)\to A$, but continuity is defined in terms of \emph{open sets}, so every section over~$A$ must be a section for some~$U\supseteq A$. By taking the direct limit we identify equal sections.
     \end{solution}
 
-  \item Let~$F$ be a sheaf on a space~$X$ and let~$(M_i)_{i\in I}$ be a locally finite covering of~$X$ by closed sets (so that for each~$x\in X$, $\left\{ i\in I\,|\,x\in M_i \right\}$ is finite). In the notation of~\ref{exercise:2-4}, suppose we are given a family~$(s_i)_{i\in I}$ with~$\forall i\in I\colon s_i\in\sections(M_i,F)$ and~$\forall i,j\in I\colon s_i=s_j$ on~$M_i\cap M_j$.
+  \item\label{exercise:2-5} Let~$F$ be a sheaf on a space~$X$ and let~$(M_i)_{i\in I}$ be a locally finite covering of~$X$ by closed sets (so that for each~$x\in X$, $\left\{ i\in I\,|\,x\in M_i \right\}$ is finite). In the notation of~\ref{exercise:2-4}, suppose we are given a family~$(s_i)_{i\in I}$ with~$\forall i\in I\colon s_i\in\sections(M_i,F)$ and~$\forall i,j\in I\colon s_i=s_j$ on~$M_i\cap M_j$.
 
     Show that there is a unique~$s\in\sections(X,F)$ with~$\forall i\in I\colon s=s_i$ on~$M_i$.
+
+    \begin{solution}
+      By the previous exercise all sections on a closed~$M_i$ are lifted uniquely to a small (open) neigbhourhood. We can apply the necessary conditions on these sets and restrict.
+    \end{solution}
+
+  \item Let~$K$ be any infinite field and~$L=K(t)$ a simple transcendental extension. Let~$X$ be the topological space obtained by giving~$K$ the topology whose closed sets are the finite subsets of~$K$.
+
+    Define a sheaf~$\mathcal{O}$ of commutative unital rings on~$X$ as follows: for~$U$ open in~$X$, $U\neq\emptyset$, let
+    \begin{equation}
+      \mathcal{O}(U)=\left\{ f\in L\,\middle|\,\exists g,h\in K[t]\colon f=\frac{g}{h}\vee\forall P\in U\colon h(P)\neq 0 \right\}.
+      \label{equation:rational-functions}
+    \end{equation}
+
+    If~$\emptyset\neq V\subseteq U$ then~$\mathcal{O}(U)\subseteq\mathcal{O}(V)\subseteq L$ and we take the inclusion as the restriction map~$\rho_V^U$. Show that~$\mathcal{O}$ is a sheaf of rings on~$X$.
 
     \begin{solution}
       TODO
     \end{solution}
 
-  \item TODO
+    Identify the stalk~$\mathcal{O}_P$ of~$\mathcal{O}$ at~$P\in X$ as a subring of~$L$ and show that it is a local ring. What is its residue field and its field of fractions?
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    When does~$\mathcal{O}$ have non-polynomial global sections? That is, we certainly have~$K[t]\subseteq\sections(X,\mathcal{O})$; when is the equality strict?
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    We can consider~$f\in\sections(U,\mathcal{O})$ as a function on~$U$, namely express~$f=g/h$ as in~\eqref{equation:rational-functions} and define for~$P\in U$
+    \begin{equation}
+      f(P)=g(P)/h(P)\in K.
+    \end{equation}
 \end{enumerate}
 
 \clearpage
