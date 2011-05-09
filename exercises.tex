@@ -53,7 +53,7 @@
       \item Characterise direct systems of sets with~$\varinjlim=\emptyset$.
 
         \begin{solution}
-          TODO
+          As the direct limit consists of the disjoint union modulo some relations, the direct limit is always nonempty, \emph{unless} the disjoint union itself consists of empty sets. Therefore all sets in the direct system must be empty: you cannot obtain an empty quotient from a nonempty set.
         \end{solution}
 
       \item Produce an interesting direct system of abelian groups with~$\varinjlim=\left\{ 0 \right\}$, the trivial group. Characterise such systems.
@@ -435,7 +435,47 @@
       TODO
     \end{solution}
 
-  \item 
+  \item For~$X$ any topological space, show that the following presheaves of sets over~$X$ are in facts sheaves:
+    \begin{enumerate}
+      \item\label{enumerate:exercise-2-a} Fixing an open~$V\subseteq X$, let
+        \begin{equation}
+          h_V(U)=
+          \begin{cases}
+            \text{singleton} & U\subseteq V \\
+            \emptyset & U\subsetneqq V
+          \end{cases}
+        \end{equation}
+        for~$U$ open in~$X$, with the unique restrictions.
+
+        \begin{solution}
+          TODO
+        \end{solution}
+
+      \item\label{enumerate:exercise-2-b} Let~$\Omega(U)=\left\{ W\,|\,\text{$W\subseteq X$ open and~$W\subseteq U$} \right\}$ for~$U$ open in~$X$ with restriction: $\Omega(U)\to\Omega(V):W\mapsto W\cap V$.
+
+        \begin{solution}
+          TODO
+        \end{solution}
+    \end{enumerate}
+
+    Interpreting presheaves on~$X$ as contravariant set-valued functors on~$\mathcal{U}$, the category of open sets of~$X$, show that the $h_V$ defined by~\ref{enumerate:exercise-2-a} are the representable functors
+    \begin{equation}
+      h_V=\Hom_{\mathcal{U}}(-, V)\colon U\mapsto\Hom_{\mathcal{U}}(U,V).
+    \end{equation}
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    Interpret the Yoneda lemma as saying that
+    \begin{equation}
+      \Hom_{\PCat/X}(h_V,F)\overset{\simeq}{\to}F(V)
+    \end{equation}
+    for any presheaf~$F$ on~$X$. Putting~$F=h_U$, this shows that~$V\mapsto h_V$ is a full and faithful embedding of~$\mathcal{U}$ into~$\PCat/X$.
+
+    \begin{solution}
+      TODO
+    \end{solution}
 
   \item 
 
