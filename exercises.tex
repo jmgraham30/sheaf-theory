@@ -293,25 +293,42 @@
     If~$\emptyset\neq V\subseteq U$ then~$\mathcal{O}(U)\subseteq\mathcal{O}(V)\subseteq L$ and we take the inclusion as the restriction map~$\rho_V^U$. Show that~$\mathcal{O}$ is a sheaf of rings on~$X$.
 
     \begin{solution}
-      TODO
+      As~$X$ is equipped with the cofinite topology, it is compact. Now every open covering reduces to a finite covering. Now the conditions for a sheaf are fulfilled: to every open set we've assigned an algebra, restrictions are correct and the glueing conditions reduces to an argument on the poles of the section (when considered over~$X$).
     \end{solution}
 
     Identify the stalk~$\mathcal{O}_P$ of~$\mathcal{O}$ at~$P\in X$ as a subring of~$L$ and show that it is a local ring. What is its residue field and its field of fractions?
 
     \begin{solution}
-      TODO
+      The stalk corresponds to
+      \begin{equation}
+        \mathcal{O}_P=\left\{ f\in L\,\middle|\,\exists g,h\in K[t]\colon f=\frac{g}{h}\wedge h(P)\neq 0 \right\}.
+      \end{equation}
+      Now the ideal of~$f$ such that~$f(P)=0$ is the unique maximal ideal because the functions for which~$f(P)\neq 0$ are invertible, hence not part of any maximal ideal. The quotient gives a residue field, which is an extension field of~$K$. The corresponding field of fractions TODO
     \end{solution}
 
     When does~$\mathcal{O}$ have non-polynomial global sections? That is, we certainly have~$K[t]\subseteq\sections(X,\mathcal{O})$; when is the equality strict?
 
     \begin{solution}
-      TODO
+      When~$K$ is not algebraically closed, there are polynomials~$h\in K[t]$ such that~$h(P)\neq 0$ for all~$P\in X$. For instance~$t^2+1$ in~$\mathbb{R}[t]$ provides a good denominator for non-polynomial global sections.
+
+      This is an equivalence: a non-polynomial global section must consist of a fraction of polynomials (exactly by the definition of the sections), so its denominator cannot have a zero. This only occurs when~$K$ is not algebraically closed (otherwise the denominator factors into linear components).
     \end{solution}
 
     We can consider~$f\in\sections(U,\mathcal{O})$ as a function on~$U$, namely express~$f=g/h$ as in~\eqref{equation:rational-functions} and define for~$P\in U$
     \begin{equation}
       f(P)=g(P)/h(P)\in K.
     \end{equation}
+    Show that this defines a morphism~$\phi\colon\mathcal{O}\to F$ where~$F$ is the sheaf of~$K$\nobreakdash-valued functions on~$X$ (giving~$K$ the indiscrete topology), and that putting~$\mathcal{O}'(U)=\Image\left( \phi(U) \right)$ defines a sheaf~$\mathcal{O}'$ with a morphism~$\mathcal{O}\to\mathcal{O}'$. Prove that~$\mathcal{O}\to\mathcal{O}'$ is an isomorphism of sheaves. Hence we may regard~$\mathcal{O}$ as a sheaf of~$K$\nobreakdash-valued functions on~$X$.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    For~$K=\mathbb{C}$ show that~$\mathcal{O}'$ is a subsheaf of the sheaf~$\mathbb{C}^\omega$ of analytic~$\mathbb{C}$\nobreakdash-valued functions on~$X=\mathbb{C}$.
+
+    \begin{solution}
+      TODO
+    \end{solution}
 \end{enumerate}
 
 \clearpage
