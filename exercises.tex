@@ -457,30 +457,32 @@
           h_V(U)=
           \begin{cases}
             \text{singleton} & U\subseteq V \\
-            \emptyset & U\subsetneqq V
+            \emptyset & U\nsubseteq V
           \end{cases}
         \end{equation}
         for~$U$ open in~$X$, with the unique restrictions.
 
         \begin{solution}
-          TODO
+          Both the monopresheaf and the gluing condition are meaningless for~$U\nsubseteq V$, so they trivially hold. For~$U\subseteq V$ both conditions are valid as there is only one possible section. Therefore all restrictions and gluings are well-defined.
         \end{solution}
 
-      \item\label{enumerate:exercise-2-b} Let~$\Omega(U)=\left\{ W\,|\,\text{$W\subseteq X$ open and~$W\subseteq U$} \right\}$ for~$U$ open in~$X$ with restriction: $\Omega(U)\to\Omega(V):W\mapsto W\cap V$.
+      \item\label{enumerate:exercise-2-b} Let~$\Omega(U)=\left\{ W\,|\,\text{$W\subseteq X$ open and~$W\subseteq U$} \right\}$ for~$U$ open in~$X$ with restriction: $\Omega(U)\to\Omega(V):W\mapsto W\cap V$. Interpreting presheaves on~$X$ as contravariant set-valued functors on~$\mathcal{U}$, the category of open sets of~$X$, show that the $h_V$ defined by~\ref{enumerate:exercise-2-a} are the representable functors
+        \begin{equation}
+          h_V=\Hom_{\mathcal{U}}(-, V)\colon U\mapsto\Hom_{\mathcal{U}}(U,V).
+        \end{equation}
 
         \begin{solution}
-          TODO
+          First of all note that~$\Omega(U)$ describes the (open) subspace topology induced by~$X$ on~$U$. Now we have in any topology (which is just a lattice) that
+          \begin{equation}
+            \Hom_{\mathcal{U}}(U,V)=
+            \begin{cases}
+              \left\{ \inj\colon U\hookrightarrow V \right\} & U\subseteq V \\
+              \emptyset & U\nsubseteq V
+            \end{cases}
+          \end{equation}
+          which corresponds to~$h_V=\Hom_{\mathcal{U}}(-,V)$.
         \end{solution}
     \end{enumerate}
-
-    Interpreting presheaves on~$X$ as contravariant set-valued functors on~$\mathcal{U}$, the category of open sets of~$X$, show that the $h_V$ defined by~\ref{enumerate:exercise-2-a} are the representable functors
-    \begin{equation}
-      h_V=\Hom_{\mathcal{U}}(-, V)\colon U\mapsto\Hom_{\mathcal{U}}(U,V).
-    \end{equation}
-
-    \begin{solution}
-      TODO
-    \end{solution}
 
     Interpret the Yoneda lemma as saying that
     \begin{equation}
@@ -489,10 +491,59 @@
     for any presheaf~$F$ on~$X$. Putting~$F=h_U$, this shows that~$V\mapsto h_V$ is a full and faithful embedding of~$\mathcal{U}$ into~$\PCat/X$.
 
     \begin{solution}
-      TODO
+      We have that~$\mathcal{U}$ is locally small (as each set of homomorphisms contains either zero or one morphism, which is quite small), so by the (contravariant) Yoneda lemma we can assign to each object~$V\in\mathcal{U}$ a functor~$h_V=\Hom(-,V)$ to~$\Sets$.
+      
+      Now we have that for each object~$V\in\mathcal{U}$ the natural transformations from the presheaf (of representable functor)~$h_V$ to a presheaf~$F$ (which is just a functor, we are working in an functor category) correspond bijectively to~$F(V)$. \Ie,
+      \begin{equation}
+        \Hom_{\PCat/X}(h_V,F)\overset{1:1}{\longleftrightarrow}F(V)
+      \end{equation}
     \end{solution}
 
-  \item 
+  \item For a topological space~$X$, let respectively~$\PCat/X$ and~$\SCat/X$ be the categories of presheaves and sheaves of sets over~$X$. Imitate the results of Chapter~$3$ as follows:
+    \begin{enumerate}
+      \item Show that~$F\to G$ is a monomorphism in~$\PCat/X$ (or in~$\SCat/X$) if and only if for all open~$U$ we have~$F(U)\to G(U)$ injective if and only if for all~$x\in X$ we have~$F_x\to G_x$ injective.
+
+        \begin{solution}
+          \begin{description}
+            \item[$1\Rightarrow 2$] Presheaf morphisms are given by the morphisms on all open~$U$, so if~$f\in\Hom_{\PCat/X}(F,G)$ is a monomorphism, all maps between the sets of functions must be monomorphic in~$\Sets$.
+            \item[$2\Rightarrow 1$] Trivial.
+            \item[$2\Rightarrow 3$] We have that~$\varinjlim$ is exact, so the exactness of~$0\to F(U)\to G(U)$ is preserved.
+            \item[$3\Rightarrow 2$] TODO
+          \end{description}
+        \end{solution}
+
+      \item Show that~$F\to G$ is an epimorphism in~$\PCat/X$ if and only if for all open~$U$ we have~$F(U)\to G(U)$ is surjective, while~$F\to G$ is an epimorphism in~$\SCat/X$ if and only if for all~$x\in X$ we have~$F_x\to G_x$ surjective.
+        
+        \begin{solution}
+          TODO
+
+          For~$\SCat/X$, we have that~$g\circ f=h\circ f$ if and only if~$(g\circ f)_x=(h\circ f)_x$ on the stalks. Now $f$ is an epimorphism in~$\SCat/X$ if and only if the induced maps on the stalks are epimorphisms in~$\Sets$, and epimorphisms in~$\Sets$ are exactly the surjective maps.
+        \end{solution}
+
+      \item Discover an appropriate definition of ``equivalence relation''~$\sim$ on a presheaf~$F$ so that you can define a presheaf~$F/\sim$ (respectively a sheaf~$F/\sim$ if~$F$ is a sheaf) together with an epimorphism~$F\to F/\sim$ (in the appropriate category) with a universal property.
+
+        \begin{solution}
+          TODO
+        \end{solution}
+
+      \item Show that each of the categories~$\PCat/X$ and~$\SCat/X$ has all limits and all colimits (in particular all equalisers and coequalisers); that in each category every monomorphism is an equaliser and every epimorphism is a coequaliser; and that every morphism has a unique epimorphism-monomorphism factorisation.
+
+        \begin{solution}
+          TODO
+        \end{solution}
+
+      \item Show that for a continuous map~$\phi\colon X\to Y$ there are induced functors~$\SCat/X\overset{\phi_*}{\underset{\phi^*}{\rightleftarrows}}\SCat/Y$ (as in~\S~3.7) with the adjointness property~7.13 and such that~$\phi^*$ preserves all finite limits (analogue of~``$\phi^*$ is left exact'').
+
+        \begin{solution}
+          TODO
+        \end{solution}
+
+      \item Is there an analogue of extension by zero?
+
+        \begin{solution}
+          TODO
+        \end{solution}
+    \end{enumerate}<++>
 
   \item 
 
