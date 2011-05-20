@@ -36,7 +36,7 @@
           The construction of the direct limit consists of quotienting the disjoint union. All elements of the set~$U$ are represented in a finite subset (for instance the singletons), so the disjoint union contains all elements. Elements are now identified if they are identified in the power set lattice of~$U$, but as the union of two finite subsets is still finite the identification of an element~$v\in U_\alpha,U_\beta$ occurs in~$U_\gamma=U_\alpha\cup U_\beta$.
         \end{solution}
 
-      \item Interpret and prove: an abelian group is the direct limit of iets finitely generated subgroups.
+      \item Interpret and prove: an abelian group is the direct limit of its finitely generated subgroups.
 
         \begin{solution}
           Analogously, finitely generated subgroups are represented in the same kind of lattice structure with atoms and finite unions of generators. 
@@ -271,7 +271,7 @@
     Let~$G$ be the constant sheaf~$\mathbb{Z}$ on~$I$. How many morphisms are there from~$F$ to~$G$? From~$G$ to~$F$?
 
     \begin{solution}
-      To make the triangle in the definition of a (pre)sheaf morphism commute, observe that~$\restr_V^U$ is either the identity of the projection on~$\left\{ 0 \right\}$ while~$\restr'{}^U_V$ is the identity for all open sets. So for a morphism from~$F$ to~$G$ we have on option: the identity on~$U$ containing~$0$ or~$1$ and the canonical injection on the other open sets.
+      To make the triangle in the definition of a (pre)sheaf morphism commute, observe that~$\restr_V^U$ is either the identity\footnote{Or some isomorphic map, the image of~$1$ defines the entire morphism and every morphism corresponds to a multiplication with a scalar.} of the projection on~$\left\{ 0 \right\}$ while~$\restr'{}^U_V$ is the identity for all open sets. So for a morphism from~$F$ to~$G$ we have on option: the identity on~$U$ containing~$0$ or~$1$ and the canonical injection on the other open sets.
 
       For a morphism from~$G$ to~$F$ on the other hand we have total freedom for~$U$ not containing~$0$ or~$1$: whatever we do on these open sets doesn't matter as the restriction morphism kills it.
     \end{solution}
@@ -317,7 +317,7 @@
 
   \item\label{exercise:2-4} Let~$F$ be a sheaf on a space~$X$ with sheaf space~$\ShfSpace(F)\overset{p}{\rightarrow} X$, and let~$A$ be a subspace of~$X$. We ca define the set (or abelian group) of sections of~$F$ over~$A$ by
     \begin{align}
-      \sections(A,F)&=\sections(A,\Shf(F)) \\
+      \sections(A,F)&=\sections\left( A,\Shf(F) \right) \\
       &=\left\{ \text{sections of the continuous map $p^{-1}(A)\overset{p}{\rightarrow}A$} \right\}.
     \end{align}
     Show that we can define~$\sections(A,F)$ in terms of~$F$ alone as~$\sections(A,F)=\varinjlim\sections(U,F)$ where the direct limit is taken over the set of open subsets~$U$ of~$X$ such that~$U\supseteq A$. (Colloquially, this says that a section of~$F$ over~$A$ extends uniquely into a small neighbourhood of~$A$.)
@@ -345,7 +345,9 @@
     If~$\emptyset\neq V\subseteq U$ then~$\mathcal{O}(U)\subseteq\mathcal{O}(V)\subseteq L$ and we take the inclusion as the restriction map~$\rho_V^U$. Show that~$\mathcal{O}$ is a sheaf of rings on~$X$.
 
     \begin{solution}
-      As~$X$ is equipped with the cofinite topology, it is compact. Now every open covering reduces to a finite covering. Now the conditions for a sheaf are fulfilled: to every open set we've assigned an algebra, restrictions are correct and the glueing conditions reduces to an argument on the poles of the section (when considered over~$X$).
+      As~$X$ is equipped with the cofinite topology, it is compact. Now every open covering reduces to a finite covering. Now the conditions for a sheaf are fulfilled: to every open set we've assigned an algebra, restrictions are correct considering them as~$K$\nobreakdash-valued functions and the glueing conditions reduces to an argument on the poles of the section (when considered over~$X$).
+
+      A better answer would be to state that the sections over~$U$ are defined as the \emph{intersection} of the sections over the (finite) covering of~$U$. It is the inverse limit of algebras realized as a pullback, which is exactly this intersection for our finite covering.
     \end{solution}
 
     Identify the stalk~$\mathcal{O}_P$ of~$\mathcal{O}$ at~$P\in X$ as a subring of~$L$ and show that it is a local ring. What is its residue field and its field of fractions?
@@ -373,6 +375,10 @@
     Show that this defines a morphism~$\phi\colon\mathcal{O}\to F$ where~$F$ is said to be the sheaf of~$K$\nobreakdash-valued functions on~$X$ (do this by giving~$K$ the indiscrete topology), and that putting~$\mathcal{O}'(U)=\Image\left( \phi(U) \right)$ defines a sheaf~$\mathcal{O}'$ with a morphism~$\mathcal{O}\to\mathcal{O}'$. Prove that~$\mathcal{O}\to\mathcal{O}'$ is an isomorphism of sheaves. Hence we may regard~$\mathcal{O}$ as a sheaf of~$K$\nobreakdash-valued functions on~$X$.
 
     \begin{solution}
+      As~$g(P)/h(P)\in K$ each~$f$ defines a~$K$\nobreakdash-valued function on an open set~$U$. This is a sheaf by trivial reasons of gluing and restrictions: we've got a pointwise definition of a function.
+
+      For the isomorphism of sheaves: for~$\mathcal{O}\to\mathcal{O}'$ we obtain an inverse map because functions are one-valued. For~$\mathcal{O}'\to\mathcal{O}$ the isomorphism is obtained by the same argument.
+
       As~$g(P)/h(P)\in K$ this easily defines a good morphism. By removing enough points from an open~$U$ in order to determine enough values to uniquely define~$f$ on~$U$ we get a nice sheaf morphism. Now~$\mathcal{O}\to\mathcal{O}'$ is a sheaf morphism because of this property.
     \end{solution}
 
