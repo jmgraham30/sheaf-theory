@@ -342,7 +342,7 @@
       \label{equation:rational-functions}
     \end{equation}
 
-    If~$\emptyset\neq V\subseteq U$ then~$\mathcal{O}(U)\subseteq\mathcal{O}(V)\subseteq L$ and we take the inclusion as the restriction map~$\rho_V^U$. Show that~$\mathcal{O}$ is a sheaf of rings on~$X$.
+    If~$\emptyset\neq V\subseteq U$ then~$\mathcal{O}(U)\subseteq\mathcal{O}(V)\subseteq L$ and we take the inclusion as the restriction map~$\restr_V^U$. Show that~$\mathcal{O}$ is a sheaf of rings on~$X$.
 
     \begin{solution}
       As~$X$ is equipped with the cofinite topology, it is compact. Now every open covering reduces to a finite covering. Now the conditions for a sheaf are fulfilled: to every open set we've assigned an algebra, restrictions are correct considering them as~$K$\nobreakdash-valued functions and the glueing conditions reduces to an argument on the poles of the section (when considered over~$X$).
@@ -543,13 +543,81 @@
         \begin{solution}
           TODO
         \end{solution}
-    \end{enumerate}<++>
+    \end{enumerate}
+
+  \item Let~$F,G$ be presheaves of sets on a topological space~$X$. Define a new presheaf~$\uHom(F,G)$ with
+    \begin{equation}
+      \uHom(F,G)(U)\colonequals\Hom_{\Sets}\left( F(U),G(U) \right)
+    \end{equation}
+    for~$U$ open in~$X$. Show that if~$F$ and~$G$ are both sheaves, then so is~$\uHom(F,G)$.
+
+    \begin{solution}
+      \begin{description}
+        \item[$\uHom(F,G)$ presheaf] By restricting a section~$f\in\uHom(F,G)(U)$ to its restriction~$\restr_V^U(f)$ we get by commutativity in the diagram for sheaf morphisms a good section in~$\uHom(F,G)(V)$, compatible with all restrictions, for~$V\subseteq U$ open.
+        \item[$\uHom(F,G)$ monopresheaf] Given the situation for the monopresheaf condition, if~$s\neq s$, both being maps~$F(U)\to G(U)$ they must disagree on some~$x\in U$, \ie, $s(u)\neq s(u')$. But~$u\in U_\lambda$ for some~$\lambda\in\Lambda$, so~$\restr_{U_\lambda}^U(s)(x)\neq\restr_{U_\lambda}^U(s')(u)$, a contradiction.
+        \item[$\uHom(F,G)$ glues] Define the section over~$U$ by its values in the~$U_\lambda$, the obvious restrictions are satisfied and we get a section glued from its components.
+      \end{description}
+    \end{solution}
+
+    Prove that this construction has the following universal property: for~$F$,~$G$,~$H$ presheaves (respectively sheaves) of sets on~$X$, there is a bijection
+    \begin{equation}
+      \Hom\left( H,\uHom(F,G) \right)\cong\Hom\left( H\times F,G \right)
+      \label{equation:natural-bijection}
+    \end{equation}
+    natural in~$F$,~$G$ and~$H$. Here~$H\times F$ is the product object provided by~3(d); it is constructed ``pointwise''.
+
+    \begin{solution}
+      Take~$\mathcal{F}\in\Hom(H,\uHom(F,G))$, that is for~$U\subseteq X$ open we have
+      \begin{equation}
+        \sections(U,\mathcal{F})\colon
+        \begin{array}{ccc}
+          H(U)&\to &\uHom(F,G)(U)=\Hom_{\Sets}\left( F(U),G(U) \right) \\
+          h&\mapsto & \left( f_h\colon F(U)\to G(U):x\to f_h(x) \right).
+        \end{array}
+      \end{equation}
+      This is now mapped to~$\Hom(H\times F,G)$ by mapping each~$\sections(U,\mathcal{F})$ to the map
+      \begin{equation}
+        \begin{array}{ccc}
+          \left( H\times F \right)(U)=H(U)\times F(U)&\to&G(U) \\
+          (h,f)\mapsto\mathcal{F}(h)(f)
+        \end{array}
+      \end{equation}
+
+      \begin{description}
+        \item[surjectivity] We can uniquely define an~$\mathcal{F}\in\Hom(H,\uHom(F,G))$ by this construction, so the map is surjective. In more detail, define
+          \begin{equation}
+            \sections(U,\mathcal{F})\to
+            \begin{array}{ccc}
+              H(U)&\to&\uHom(F,G)(U) \\
+              h&\mapsto& \left( f\mapsto g \right)
+            \end{array}
+          \end{equation}
+          and this provides a good preimage.
+        \item[injectivity] Assume~$\mathcal{F}_1$ and~$\mathcal{F}_2$ in~$\Hom(H,\uHom(G,F))$ are mapped to the same element in~$\Hom(H\times F,G)$. Then by the construction above the inverse image of this element corresponds to a unique element in the domain, a contradiction.
+      \end{description}
+    \end{solution}
+
+    Show that, if we want the property~\eqref{equation:natural-bijection} to hold, then the definition of~$\uHom$ is forced on us, for presheaves at least.
+
+    \begin{solution}
+      TODO
+    \end{solution}
+
+    Reinterpret~\eqref{equation:natural-bijection} as requiring the existence of an evaluation map
+    \begin{equation}
+      \uHom(F,G)\times F\to G
+    \end{equation}
+    with a suitable universal property.
 
   \item 
 
-  \item 
+  \item Since any category of presheaves is a functor category, we can define it for categories other than those of open sets of a topological space. For~$\mathcal{C}$ any category, let~$\PCat/\mathcal{C}$ be the category~$\Sets^{\mathcal{C}^{\opp}}$ of contravariant functors~$\mathcal{C}\to\Sets$ (and natural transformations).
 
-  \item 
+    As a special case, any group~$G$ can be regarded as a category with one object whose endomorphisms are the elements of~$G$, with composition defined as in~$G$ (hence every morphism is an isomorphism). Show that the category~$\PCat/G$ can be regarded as the category of sets-with-a-$G^{\opp}$-action, that is the category of permutation representations of~$G$.
+
+    \begin{solution}
+      As~$F\in\PCat/G$ is a contravariant functor~$G\to\Sets$ and by definition of the category of a group~$\Ob(G)=\left\{ \cdot_G \right\}$, we have~$F(\cdot_G)$ a set. As all endomorphisms defined on~$\cdot_G$ by~$G$ are invertible ($G$ a group, not just a monoid) we have~$F(\End(\cdot_G))=\Aut\left( F(\cdot_G) \right)$, \ie, all bijections or permutations on~$F(\cdot_G)$. Now every~$g\in G$ defines an (invertible) action on the set~$F(\cdot_G)$, in which~$x\in F(\cdot_G)$ is mapped to~$F(\cdot_G)(x)$.
+    \end{solution}
 
   \item If~$\mathcal{A}$ and~$\mathcal{B}$ are abelian categories, a functor~$F\colon\mathcal{A}\to\mathcal{B}$ is called \emph{half exact} if and only if whenever~$0\to P\to Q\to R\to 0$ is exact in~$\mathcal{A}$, $F(P)\to F(Q)\to F(R)$ is exact in~$\mathcal{B}$. $F$ is called \emph{additive} if and only if all the maps~$F\colon\Hom_{\mathcal{A}}(P,Q)\to\Hom_{\mathcal{B}}(F(P),F(Q))$ are abelian group homomorphisms.
 
