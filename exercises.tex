@@ -609,7 +609,45 @@
     \end{equation}
     with a suitable universal property.
 
-  \item 
+  \item Show that each of the categories~$\PCat/X$ and~$\SCat/X$ of Q3 has a \emph{subobject classifier}, that is, an object~$\Omega$ with the equivalent properties (prove their equivalence):
+    \begin{enumerate}
+      \item\label{subobject-1} there is a natural bijection
+        \begin{equation}
+          \Hom(F,\Omega)\cong\text{set of subobjects of~$F$}
+        \end{equation}
+        for any object~$F$;
+      \item\label{subobject-2} $\Omega$ has a special subobject~$\mathrm{1}\overset{t}{\to}\Omega$ such that any morphism~$G\to F$ is the pullback of~$t$ over a unique morphism~$F\to\Omega$ (called the \emph{¢lassifying map} of~$G\to F$).
+    \end{enumerate}
+
+    \begin{proof}
+      
+    \end{proof}
+
+    \begin{solution}
+      \begin{description}
+        \item[$\PCat/X$] By statement~\ref{subobject-1}~$\Hom(F,\Omega)$ bijects with the set of subobjects of~$F$, which is a set of objects in~$\PCat/X$. Now take~$F=h_U$, by the Yoneda lemma we have
+          \begin{equation}
+            \Hom(h_U,\Omega)=\Omega(U)\overset{1:1}{\longleftrightarrow}\left\{ \text{subobjects of~$h_U$} \right\}.
+          \end{equation}
+          But a subobject of~$h_U$ is an~$h_V$ for~$V\subseteq U$ open, so by the full and faithful embedding of~$\mathcal{U}$ into~$\PCat/X$, we have
+          \begin{equation}
+            \Omega(U)=\left\{ V\subseteq X\,|\,\text{$V$ open, $V\subseteq U$} \right\}.
+          \end{equation}
+
+          For a general presheaf~$F$ we now find
+          \begin{equation}
+            \Omega(U)=\left\{ \mathcal{P}\left( F(U) \right) \right\}.
+          \end{equation}
+
+        \item[$\SCat/X$] TODO
+      \end{description}
+    \end{solution}
+
+    Compare the situation in~$\Sets=\SCat/X$ for~$X$ a one-point space, where~$\Omega$ is a two-point set and the classifying map is the characteristic map of a subset.
+    
+    \begin{solution}
+      TODO
+    \end{solution}
 
   \item Since any category of presheaves is a functor category, we can define it for categories other than those of open sets of a topological space. For~$\mathcal{C}$ any category, let~$\PCat/\mathcal{C}$ be the category~$\Sets^{\mathcal{C}^{\opp}}$ of contravariant functors~$\mathcal{C}\to\Sets$ (and natural transformations).
 
@@ -632,7 +670,7 @@
     \begin{solution}
       \begin{description}
         \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$] We show
-        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]<++>
+        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
         \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]<++>
       \end{description}<++>
     \end{solution}<++>
