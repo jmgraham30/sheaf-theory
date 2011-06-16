@@ -1,5 +1,23 @@
 \documentclass[a4paper,11pt,oneside,openany,article]{memoir}
 \input{preamble}
+\newsubfloat{figure}
+% #1 id, #2 function, #3 xrange, #4 yrange
+\newcommand\parametricplot[4]{
+  \draw plot[id=#1, raw gnuplot, thick] function{
+    f(x,y) = #2;
+    set xrange #3;
+    set yrange #4;
+    set view 0,0;
+    set isosample 1000,1000;
+    %set isosample 10,10;
+    set size square;
+    set cont base;
+    %set cntrparam levels incre 0,0.1,0;
+    set cntrparam levels discrete 0,0;
+    unset surface;
+    splot f(x,y)
+  }
+}
 \selectlanguage{english}
 
 \begin{document}
@@ -523,7 +541,11 @@
       \item Discover an appropriate definition of ``equivalence relation''~$\sim$ on a presheaf~$F$ so that you can define a presheaf~$F/\sim$ (respectively a sheaf~$F/\sim$ if~$F$ is a sheaf) together with an epimorphism~$F\to F/\sim$ (in the appropriate category) with a universal property.
 
         \begin{solution}
-          TODO
+          Let there be an equivalence relation~$R(U)$ on~$F(U)$ for every open set~$U$, we say the collection of~$R(U)$ defines an equivalence relation on~$F$ if for~$s,t\in F(U)$ we have~$s\sim t$ if and only if we can represent~$U$ by a union of open~$U_i$ such that for all~$i$ the restrictions of~$s$ and~$t$ to~$U_l$ are equivalent modulo~$R(U_i)$\footnote{TODO herschrijven naar~$\rho$}.
+
+          We need this condition for the notion of quotient presheaf to hold, without it the restrictions will be broken.
+
+          TODO universal property
         \end{solution}
 
       \item Show that each of the categories~$\PCat/X$ and~$\SCat/X$ has all limits and all colimits (in particular all equalisers and coequalisers); that in each category every monomorphism is an equaliser and every epimorphism is a coequaliser; and that every morphism has a unique epimorphism-monomorphism factorisation.
@@ -734,7 +756,28 @@
       is a manifold (topological, differentiable or analytic as you wish), whereas that given by the equation~$y^2=x^2(x+1)$ is not.
 
       \begin{solution}
-        TODO
+        \begin{figure}[p]
+          \subbottom[$y^2=(x+1)x(x-1)$]{
+            \begin{tikzpicture}[xscale=.75,yscale=.75]
+              \draw[very thin,color=gray] (-3.4,-3.4) grid (3.4,3.4);
+              \draw[->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+              \draw[->] (0,-3.5) -- (0,3.5) node[above] {$y$};
+              \parametricplot{curve-1}{y**2-x*(x-1)*(x+1)}{[-4:4]}{[-4:4]};
+              \label{subfigure:curve-1}
+            \end{tikzpicture}
+          }
+          \subbottom[$y^2=x^2(x+1)$]{
+            \begin{tikzpicture}[xscale=.75,yscale=.75]
+              \draw[very thin,color=gray] (-3.4,-3.4) grid (3.4,3.4);
+              \draw[->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+              \draw[->] (0,-3.5) -- (0,3.5) node[above] {$y$};
+              \parametricplot{curve-2}{y**2-x**2*(x+1)}{[-4:4]}{[-4:4]};
+              \label{subfigure:curve-2}
+            \end{tikzpicture}
+          }
+          \caption{Plots}
+          \label{figure:curves}
+        \end{figure}
       \end{solution}
 
     \item[Algebraic version] Let~$K$ be any field and~$f(x,y)\in K[x,y]=R$. By Q6 the morphism~$R\to R/(f)$ identifies the space~$\Spec R/(f)$ with a closed subspace~$C$ of~$\Spec R=\mathbb{A}_K^2=X$ say. Find the sheaf of ideals~$I$ in~$\mathcal{O}_X|_C$ such that, letting~$\mathcal{O}'$ be the quotient of~$\mathcal{O}_X|_C$ by~$I$, the morphism
@@ -756,11 +799,32 @@
       Other curves for your amusement:
       \begin{align}
         y^2&=x^2(x-1) \\
-        y^2=x^3
+        y^2&=x^3
       \end{align}
 
       \begin{solution}
-        TODO
+        \begin{figure}[p]
+          \subbottom[$y^2=x^2(x-1)$]{
+            \begin{tikzpicture}[xscale=.75,yscale=.75]
+              \draw[very thin,color=gray] (-3.4,-3.4) grid (3.4,3.4);
+              \draw[->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+              \draw[->] (0,-3.5) -- (0,3.5) node[above] {$y$};
+              \parametricplot{curve-3}{y**2-x**2*(x-1)}{[-4:4]}{[-4:4]};
+              \label{subfigure:curve-3}
+            \end{tikzpicture}
+          }
+          \subbottom[$y^2=x^3$]{
+            \begin{tikzpicture}[xscale=.75,yscale=.75]
+              \draw[very thin,color=gray] (-3.4,-3.4) grid (3.4,3.4);
+              \draw[->] (-3.5,0) -- (3.5,0) node[right] {$x$};
+              \draw[->] (0,-3.5) -- (0,3.5) node[above] {$y$};
+              \parametricplot{curve-4}{y**2-x**3}{[-4:4]}{[-4:4]};
+              \label{subfigure:curve-4}
+            \end{tikzpicture}
+          }
+          \caption{Plots}
+          \label{figure:curves}
+        \end{figure}
       \end{solution}
   \end{description}
 \end{enumerate}
