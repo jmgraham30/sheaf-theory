@@ -7,6 +7,7 @@
   \protect\includegraphics[width=2cm]{universiteitantwerpen-eps-converted-to.pdf} \\[3em]
   Pieter Belmans
 }
+\date{22 juni 2011}
 \maketitle
 
 \tableofcontents
@@ -16,7 +17,7 @@
 \section{Voorwoord}
 Zoals gebruikelijk voor een vak bij prof.~dr.~Van~Oystaeyen schrijft een student een werk(je) waarin hij iets vertelt dat vaagweg met de cursus te maken heeft. Dit keer is het niet anders. Voor het vak Schoventheorie\footnote{De laatste keer dat het in zijn huidige vorm gegeven wordt ontdekte ik onlangs, dit is bijgevolg de laatste keer dat zo'n werk geschreven wordt voor het vak Schoventheorie.} heb ik gekozen om een tweeledig werk te schrijven.
 
-Enerzijds wil ik de drie (of vier als je de weinig bestudeerde cohomotopie meerekent) grote pijlers van de algebra\"ische topologie defini\"eren: homotopie, homologie en cohomologie. Een bachelorstudent hoort deze vaak, zonder echt te weten wat deze nu exact zijn. Om mezelf (en mijn medestudenten, moesten deze ge\"interesseerd zijn in wat ik hier schrijf) voor eens en voor altijd duidelijk te maken wat deze termen betekenen heb ik wat dingen hierover uitgezocht en neergeschreven.
+Enerzijds wil ik de drie (of vier als je de weinig bestudeerde cohomotopie meerekent) grote pijlers van de algebra\"ische topologie defini\"eren: homotopie, homologie en cohomologie. Een bachelorstudent hoort deze vaak, zonder echt te weten wat deze nu exact zijn. Om mezelf (en mijn medestudenten, moesten deze ge\"interesseerd zijn in wat ik hier schrijf) voor eens en voor altijd duidelijk te maken wat deze termen betekenen, heb ik wat dingen hierover uitgezocht en neergeschreven.
 
 Daarna geef ik een introductie tot bettigetallen, een concrete invulling van de algebra\"ische topologie en het verband van deze getallen met cohomologie. Ook hier moet ik (noodgedwongen) op de vlakte blijven: noch het formaat van het werk, noch mijn kennis staan me toe om zeer diep te gaan.
 
@@ -29,7 +30,7 @@ De meeste topologen zijn zeer ge\"interesseerd in de classificatie van topologis
 
 In het vak Analytische topologie\footnote{Eerste semester in de tweede bachelor, door prof.~dr.~Lowen.} worden verschillende van deze topologische invarianten besproken:
 \begin{description}
-  \item[separatie-eigenschappen] Zoals daar zijn hausdorff, regulier, normaal, beschrijven deze invarianten in welke mate we in staat zijn om punten of deelruimten van elkaar te scheiden. 
+  \item[separatie-eigenschappen] Zoals daar zijn hausdorff, kolmogorov, regulier, normaal, \ldots beschrijven deze invarianten in welke mate we in staat zijn om punten of deelruimten van elkaar te scheiden. 
 
   \item[aftelbaarheidsvoorwaarden] Overdekkingen of omgevingenbasissen kunnen aftelbare delen bevatten, zodat het voldoende is om slechts naar dit aftelbaar deel te kijken om alsnog algemene uitspraken te kunnen doen.
     
@@ -45,7 +46,7 @@ In het vak Analytische topologie\footnote{Eerste semester in de tweede bachelor,
 Al deze invarianten hebben ook een lokale varianten, waarbij er enkel wordt gekeken naar een arbitraire omgeving van een punt. Voor interessante voorbeelden die deze topologische invarianten van elkaar scheiden verwijzen we naar~\cite{counterexamples-in-topology}.
 \vspace{1em}
 
-Al deze invarianten vinden hun oorsprong binnen de analytische topologie. Maar door een goede vertaling van de topologie naar algebra te maken zullen we in staat zijn om een nieuwe klasse van topologische invarianten aan te boren. Zo komen we tot de \emph{algebra\"ische topologie}. We beginnen met een van bij professor Lowen gekend concept: de fundamentaalgroep en haar directe veralgemeningen.
+Al deze invarianten vinden hun oorsprong binnen de analytische topologie. Maar door een goede vertaling van topologie naar algebra te maken zullen we in staat zijn om een nieuwe klasse van topologische invarianten aan te boren. Zo komen we tot de \emph{algebra\"ische topologie}. We beginnen met een van bij professor Lowen gekend concept: de fundamentaalgroep en haar directe veralgemeningen.
 
 \subsection{Homotopie}
 Hierbij zijn we ge\"interesseerd in de continue deformaties van continue functies tussen twee topologische ruimten naar elkaar. Als zo'n deformatie (die we een \emph{homotopie} zullen noemen) mogelijk is, zijn de functies in een bepaald aspect gelijk aan elkaar. Formeel:
@@ -56,7 +57,7 @@ Hierbij zijn we ge\"interesseerd in de continue deformaties van continue functie
 
 Algebra\"ische topologie heeft geen alleenrecht op de notie van homotopie, maar veel concepten binnen de algebra\"ische topologie zullen invariant zijn voor homotopie. Het maakt dus niet uit welke functie we kiezen zolang ze maar homotoop zijn aan elkaar. In~Hoofdstuk~3 zien we invarianten die gelijk zijn voor homotope ruimten, maar eerst bespreken we de homotopiegroepen.
 
-In de cursus Analytische topologie zagen we reeds de notie van fundamentaalgroep. Hiermee werd de verzameling van alle klassen van lussen in een basispunt~$x_0$ van een topologische ruimte~$X$ bedoeld. Op basis hiervan kunnen we zeggen of lussen al dan niet samentrekbaar in de ruimte. Formeel:
+In de cursus Analytische topologie zagen we reeds de notie van fundamentaalgroep. Hiermee werd de verzameling van alle klassen van lussen in een basispunt~$x_0$ van een topologische ruimte~$X$ bedoeld. Op basis hiervan kunnen we zeggen of lussen al dan niet samentrekbaar zijn in de ruimte. Formeel:
 
 \begin{definition}
   Uit de verzameling van \emph{lussen}~$f\colon[0,1]\to X$ met~$f(0)=f(1)=x_0$ en~$f$ continu delen we de equivalentierelatie die ge\"induceerd wordt door homotopie weg. Hierop zetten we vervolgens het product van klassen door~$[f]\ast [g]$ te defini\"eren voor representanten~$f$ en~$g$ als
@@ -80,7 +81,7 @@ Zo associ\"eren we dus aan een topologische ruimte (of algemener: een object bin
 
     \item Voor open delen van~$\mathbb{R}^n$ kunnen we nu ook de notie van \emph{enkelvoudig samenhangend} invoeren. In de cursus Complexe analyse\footnote{Gegeven door prof.~dr.~Eelbode.} werkten we heel vaak met enkelvoudig samenhangende gebieden, waar we gebruik maken van~$\mathbb{C}\cong\mathbb{R}^2$. Voor zo'n enkelvoudig samenhangend gebied en een analytische functie hebben we wegens de integraalstelling van Cauchy dat de integraal voor eender welke gesloten contour~$0$ is.
 
-      Maar deze stelling is nu enkel geformuleerd voor enkelvoudig samenhangende open delen: ze kan echter geherformuleerd worden in functie van (we gaan een woord gebruiken dat we pas later invoeren) homologe contouren: als~$C_1$ en~$C_2$ homologe gesloten krommen zijn in een (samenhangscomponent van) een open deel~$\Omega$ en~$f\in\mathrm{H}(\Omega)$ een holomorfe of analytische functie hierop, dan geldt
+      Maar deze stelling is nu enkel geformuleerd voor enkelvoudig samenhangende open delen: ze kan echter geherformuleerd worden in functie van homologe (zie later) contouren: als~$C_1$ en~$C_2$ homologe gesloten krommen zijn in een (samenhangscomponent van) een open deel~$\Omega$ en~$f\in\mathrm{H}(\Omega)$ een holomorfe of analytische functie hierop, dan geldt
       \begin{equation}
         \oint_{\mathrlap{C_1}}\,f(z)\;\mathrm{d}z=\oint_{\mathrlap{C_2}}\,f(z)\;\mathrm{d}z.
       \end{equation}
@@ -102,7 +103,7 @@ We merken reeds een probleem bij~$\fundamental(\mathbb{R}^n,x_0)$ en~$\fundament
 In plaats van lussen (die homotoop zijn met~$\sphere^1$) in een punt~$x_0$ zullen we naar sferen~$\sphere^n$ kijken en zien hoe deze zich gedragen. Bijgevolg is~$\homotopyGroup_n(X,x_0)$ de verzameling van homotopieklassen van afbeeldingen~$f\colon\sphere^n\to X$ die een basispunt op de sfeer naar~$x_0$ sturen.
 
 Maar we kunnen ook volgende definitie\footnote{Waarom niet de meer intu\"itieve versie met sferen? Wel, voor~$f\ast g$ met~$f,g\colon\sphere^n\to X$ is de groepsbewerking~$\Phi\circ h$ waar~$\Phi\colon\sphere^n\to\sphere^n\wedge\sphere^n/\sim$ waarbij~$\sim$ twee grote cirkels op de factoren identificeert en~$\wedge$ de wedgesom is, het coproduct in~$\TopP$ dat gedefinieerd is door~$(X,x_0)\wedge(Y,y_0)/\left\{ (x_0,y_0) \right\}
-$ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op de eerste sfeer~$f$ is en op de tweede~$h$. Net \emph{daarom} dat we de minder intu\"itieve maar gemakkelijkere versie zullen defini\"eren.} invoeren:
+$ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op de eerste sfeer~$f$ is en op de tweede~$g$. Net \emph{daarom} dat we de minder intu\"itieve maar gemakkelijkere versie zullen defini\"eren.} invoeren:
 
 \begin{definition}
   De~$n$\nobreakdash-de homotopiegroep~$\homotopyGroup_n(X,x_0)$ is de verzameling homotopieklassen voor afbeeldingen~$f\colon[0,1]^n\to X$ waarbij de groepsbewerking gedefinieerd is als
@@ -126,7 +127,7 @@ $ en~$h$ is gedefinieerd als~$h\colon\sphere^n\wedge\sphere^n\to X$ zodat~$h$ op
 \end{example}
 
 \begin{remark}
-  Er bestaat ook de notie van \emph{cohomotopie}. De afbeeldingen worden simpelweg omgedraaid, dus de $n$\nobreakdash-de cohomotopiegroep~$\homotopyGroup^n(X,x_0)$ bestaat uit de klassen van~$f\colon X\to\sphere^n$. Ze zijn echter veel minder onderzocht dan homotopie en (co)homologie, daarom dat in de inleiding slechts~$3$~pijlers gesuggereerd werden\footnote{Ik had er nog nooit van gehoord totdat ik aan dit werkje begon.}. Wel interessant is dat~$\homotopyGroup^1(X,x_0)\cong\homologyGroup^1(X)$ de eerste cohomologiegroep.
+  Er bestaat ook de notie van \emph{cohomotopie}. De afbeeldingen worden simpelweg omgedraaid, dus de $n$\nobreakdash-de cohomotopiegroep~$\homotopyGroup^n(X,x_0)$ bestaat uit de klassen van~$f\colon X\to\sphere^n$. Ze zijn echter veel minder onderzocht dan homotopie en (co)homologie, daarom dat in de inleiding slechts~$3$~pijlers gesuggereerd werden\footnote{Ik had er nog nooit van gehoord totdat ik aan dit werkje begon.}. Wel interessant is dat~$\homotopyGroup^1(X,x_0)\cong\homologyGroup^1(X)$, de eerste cohomologiegroep.
 \end{remark}
 
 \subsection{Homologie en cohomologie}\label{subsection:homology-and-cohomology}
@@ -141,13 +142,13 @@ Waar homotopie met een gepunte topologische ruimte een groep associeerde, zal (c
   \end{equation}
 \end{definition}
 
-Wie een beetje vertrouwd is met categorietheorie weet dat we graag een co- defini\"eren. Na verloop van tijd wordt dit als een triviale oefening beschouwd, maar nu zullen we deze nog expliciet geven.
+Wie een beetje vertrouwd is met categorietheorie en haar eigenaardigheden weet dat we graag een ``co-'' defini\"eren. Na verloop van tijd wordt dit als een triviale oefening beschouwd, maar nu zullen we deze nog expliciet geven.
 
 \begin{definition}
-  Een \emph{coketencomplex}~$(A^\bullet,d^\bullet)$ is een rij van abelse groepen (of modulen) die aan elkaar worden geregen met behulp van de homomorfismen~$d^n\colon A\to A_{n+1}$ zodat de samenstelling~$d_{n+1}\circ d_n=0$.
+  Een \emph{coketencomplex}~$(A^\bullet,d^\bullet)$ is een rij van abelse groepen (of modulen) die aan elkaar worden geregen met behulp van de homomorfismen~$d^n\colon A_n\to A_{n+1}$ zodat de samenstelling~$d_{n+1}\circ d_n=0$.
 \end{definition}
 
-We hebben dus een keten die ``in de andere richting'' gaat. We zeggen dat de index~$n$ de \emph{graad} of \emph{dimensie}, zodat ketencomplexen dalende afbeeldingen hebben terwijl coketencomplexen net stijgen in dimensie.
+We hebben dus een keten die ``in de andere richting'' gaat. We zeggen dat de index~$n$ de \emph{graad} of \emph{dimensie} is, zodat ketencomplexen ``dalende afbeeldingen'' hebben terwijl coketencomplexen net stijgen in dimensie.
 
 \begin{definition}
   Een \emph{begrensd} (co)ketencomplex is een (co)ketencomplex waarvan de termen op een eindig aantal na gelijk zijn aan~$0$.
@@ -183,12 +184,14 @@ We hebben nu mits wat verificaties (zie eender welk handboek over homologie) een
 
 Na dit mooie voorbeeld gaan we terug naar de essentie: wat doet (co)homologie nu? Wel, we hadden een rij van groepen (of modulen, \ldots) met afbeeldingen ertussen. Een voor de hand liggende vraag is nu om naar de exactheid hiervan te kijken. Het ketencomplex is exact als en slechts als~$\cycleGroup_n(X)=\boundaryGroup_n(X)$, dus~$\homologyGroup_n(X)=0$. Nu zijn triviale groepen niet bijster interessant en bieden ze weinig informatie over de onderliggende ruimte, dus de interessante gevallen zijn wanneer het ketencomplex \emph{niet exact} is.
 
-In dat geval zeggen we dat de (co)homologiegroepen ons zeggen hoever we van exactheid verwijderd zijn. We vinden dan immers dat~$\Image d_{n+1}\subsetneqq\Ker d_n$. Na een stevige veralgemening naar categorie\"en en functoren vinden we volgend motto\footnote{De bron is me onbekend.}:
+In dat geval zeggen we dat de (co)homologiegroepen ons zeggen hoever we van exactheid verwijderd zijn. We vinden dan immers dat~$\Image d_{n+1}\subsetneqq\Ker d_n$ zodat~$\mathrm{H}_n(X)\neq 0$.
+
+Na een stevige veralgemening naar categorie\"en en functoren vinden we volgend motto\footnote{De bron is me onbekend.}:
 \begin{quote}
-  Cohomology measures the lack of right-exactness.
+  ``\textsl{Cohomology measures the lack of right-exactness.}''
 \end{quote}
 
-We kunnen dus veel verder kijken dan enkel naar algebra\"ische topologie: elke functor kan onderzocht worden op zijn cohomologie. Neem bijvoorbeeld de favoriete functor van elke bachelorstudent,~$\otimes$. Deze geeft na de constructie van de rij \emph{afgeleide functoren}~$\Tor_n$, gedefinieerd als~$\Tor^R_n(A,B)=(\mathrm{L}_n(-\otimes_R B))(A)$ en de cohomologie van deze rij levert technieken om modulen te onderzoeken. Analoog voor~$\Ext^n_R(A,B)=(\mathrm{R}^n(\Hom_R(A,-)))(B)$.
+We kunnen dus veel verder kijken dan enkel naar algebra\"ische topologie: elke functor kan onderzocht worden op zijn cohomologie. Neem bijvoorbeeld de favoriete functor van elke bachelorstudent,~$\otimes$. Deze geeft na de constructie van de rij \emph{afgeleide functoren}~$\Tor_n$, gedefinieerd als~$\Tor^R_n(A,B)=\mathrm{L}_n(-\otimes_R B)(A)$ met~$\mathrm{L}_n$ de $n$-de linksafgeleide functor en de cohomologie van deze rij levert technieken om modulen te onderzoeken. Analoog voor~$\Ext^n_R(A,B)=(\mathrm{R}^n(\Hom_R(A,-)))(B)$ waar~$\mathrm{R}^n$ nu de $n$-de rechtsafgeleide functor voorstelt.
 
 Maar terug concreet: de ingevoerde simpliciale homologie werkt dus met modulen~$A_n$ die overeenkomen met de vrije abelse groepen voortgebracht door geori\"enteerde $n$\nobreakdash-dimensionale simplices over een lichaam. De homologiegroepen meten nu het aantal~$n$-dimensionale gaten in het simpliciale complex. Wat we nu zouden kunnen doen is een topologische ruimte (we nemen bijvoorbeeld een torus) trianguleren en mits een voldoende goede resolutie kunnen we zo alle eigenschappen van de gaten in deze ruimte beschrijven.
 
@@ -243,11 +246,11 @@ In~Hoofdstuk~\ref{subsection:homology-and-cohomology} kwamen geen echte voorbeel
         1,\binom{n}{1},\ldots,\binom{n}{n},0,0,0,\ldots
       \end{equation}
 
-      We kunnen deze omgekeerde beweging nu helemaal te voltrekken door te zeggen dat de rang van~$\homologyGroup_k(\torus^n)$ gegeven wordt door~$\binom{n}{k}$. Meer nog, er geldt dat:~$\homologyGroup_k(\torus^n)\cong\mathbb{Z}^{\binom{n}{k}}$.
+      We kunnen deze omgekeerde beweging nu helemaal voltrekken door te zeggen dat de rang van~$\homologyGroup_k(\torus^n)$ gegeven wordt door~$\binom{n}{k}$. Meer nog, er geldt dat:~$\homologyGroup_k(\torus^n)\cong\mathbb{Z}^{\binom{n}{k}}$.
 
       Voor de intu\"itieve interpretatie in het geval~$n=2$:~$\betti_0(\torus^2)$ vertelt ons dat er~$1$~samenhangscomponent is, wat natuurlijk duidelijk is. Verder zijn er twee~$2$\nobreakdash-dimensionale gaten: deze zijn respectievelijk het gat in de torus en de holte in het binnenste van de torus. Tot slot is er~\'e\'en~$3$\nobreakdash-dimensionaal gat: de ruimtelijke leegte middenin de torus waardoor je je vinger kan steken, maar dit keer in~$3$~dimensies opgevat.
       
-    \item Totnogtoe waren de bettigetallen na een bepaald punt constant nul. Dit kwam overeen met een zekere notie van eindigdimensionaliteit. Als we echter onze blik richten op de oneindigdimensionale complexe projectieve ruimte~$\mathbb{C}\mathbb{P}^{\infty}$ vinden
+    \item Totnogtoe waren de bettigetallen na een bepaald punt constant nul. Dit kwam overeen met een zekere notie van eindigdimensionaliteit. Als we echter onze blik richten op de oneindigdimensionale complexe projectieve ruimte~$\mathbb{C}\mathbb{P}^{\infty}$ vinden we
       \begin{equation}
         1,0,1,0,\ldots
       \end{equation}
@@ -299,7 +302,7 @@ We bekomen tot slot:
 \clearpage
 
 \section{Besluit}
-Dit werk is geenszins een gefundeerde introductie tot algebra\"ische topologie, het is slechts een tot mislukken gedoemde introductie. Maar bepaalde aspecten van dit werk zijn \emph{wel} reeds aan bod gekomen op plaatsen waar ik het niet zou verwacht hebben: tijdens het seminarie van dr.~Bernhard Keller over clusteralgebra's kwam bijvoorbeeld op een bepaald moment de eulerkarakteristiek naar voren.
+Dit werk is geenszins een gefundeerde introductie tot algebra\"ische topologie: ik moest me enerzijds houden aan een zekere richtlijn wat het aantal pagina's betreft en anderzijds vormt algebra\"ische topologie niet de hoofdinhoud van het vak schoventheorie. Maar bij het schrijven ervan heb ik mooie wiskunde leren kennen, die me in staat heeft gesteld om de seminaries van de Advanced Master in Noncommutative Algebra \& Geometry te volgen.
 
 \nocite{*}
 \bibliographystyle{alpha}
