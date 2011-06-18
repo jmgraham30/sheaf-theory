@@ -593,55 +593,57 @@
       \end{equation}
     \end{solution}
 
-  \item For a topological space~$X$, let respectively~$\PCat/X$ and~$\SCat/X$ be the categories of presheaves and sheaves of sets over~$X$. Imitate the results of Chapter~$3$ as follows:
-    \begin{enumerate}
-      \item Show that~$F\to G$ is a monomorphism in~$\PCat/X$ (or in~$\SCat/X$) if and only if for all open~$U$ we have~$F(U)\to G(U)$ injective if and only if for all~$x\in X$ we have~$F_x\to G_x$ injective.
+  %\item For a topological space~$X$, let respectively~$\PCat/X$ and~$\SCat/X$ be the categories of presheaves and sheaves of sets over~$X$. Imitate the results of Chapter~$3$ as follows:
+  %  \begin{enumerate}
+  %    \item Show that~$F\to G$ is a monomorphism in~$\PCat/X$ (or in~$\SCat/X$) if and only if for all open~$U$ we have~$F(U)\to G(U)$ injective if and only if for all~$x\in X$ we have~$F_x\to G_x$ injective.
 
-        \begin{solution}
-          \begin{description}
-            \item[$1\Rightarrow 2$] Presheaf morphisms are given by the morphisms on all open~$U$, so if~$f\in\Hom_{\PCat/X}(F,G)$ is a monomorphism, all maps between the sets of functions must be monomorphic in~$\Sets$.
-            \item[$2\Rightarrow 1$] Trivial.
-            \item[$2\Rightarrow 3$] We have that~$\varinjlim$ is exact, so the exactness of~$0\to F(U)\to G(U)$ is preserved.
-            \item[$3\Rightarrow 2$] TODO
-          \end{description}
-        \end{solution}
+  %      \begin{solution}
+  %        \begin{description}
+  %          \item[$1\Rightarrow 2$] Presheaf morphisms are given by the morphisms on all open~$U$, so if~$f\in\Hom_{\PCat/X}(F,G)$ is a monomorphism, all maps between the sets of functions must be monomorphic in~$\Sets$.
+  %          \item[$2\Rightarrow 1$] Trivial.
+  %          \item[$2\Rightarrow 3$] We have that~$\varinjlim$ is exact, so the exactness of~$0\to F(U)\to G(U)$ is preserved.
+  %          \item[$3\Rightarrow 1$] If 
+  %        \end{description}
+  %      \end{solution}
 
-      \item Show that~$F\to G$ is an epimorphism in~$\PCat/X$ if and only if for all open~$U$ we have~$F(U)\to G(U)$ is surjective, while~$F\to G$ is an epimorphism in~$\SCat/X$ if and only if for all~$x\in X$ we have~$F_x\to G_x$ surjective.
-        
-        \begin{solution}
-          TODO
+  %    \item Show that~$F\to G$ is an epimorphism in~$\PCat/X$ if and only if for all open~$U$ we have~$F(U)\to G(U)$ is surjective, while~$F\to G$ is an epimorphism in~$\SCat/X$ if and only if for all~$x\in X$ we have~$F_x\to G_x$ surjective.
+  %      
+  %      \begin{solution}
+  %        TODO
 
-          For~$\SCat/X$, we have that~$g\circ f=h\circ f$ if and only if~$(g\circ f)_x=(h\circ f)_x$ on the stalks. Now $f$ is an epimorphism in~$\SCat/X$ if and only if the induced maps on the stalks are epimorphisms in~$\Sets$, and epimorphisms in~$\Sets$ are exactly the surjective maps.
-        \end{solution}
+  %        For~$\SCat/X$, we have that~$g\circ f=h\circ f$ if and only if~$(g\circ f)_x=(h\circ f)_x$ on the stalks. Now $f$ is an epimorphism in~$\SCat/X$ if and only if the induced maps on the stalks are epimorphisms in~$\Sets$, and epimorphisms in~$\Sets$ are exactly the surjective maps.
+  %      \end{solution}
 
-      \item Discover an appropriate definition of ``equivalence relation''~$\sim$ on a presheaf~$F$ so that you can define a presheaf~$F/\sim$ (respectively a sheaf~$F/\sim$ if~$F$ is a sheaf) together with an epimorphism~$F\to F/\sim$ (in the appropriate category) with a universal property.
+  \addtocounter{enumi}{1}
 
-        \begin{solution}
-          Let there be an equivalence relation~$R(U)$ on~$F(U)$ for every open set~$U$, we say the collection of~$R(U)$ defines an equivalence relation on~$F$ if for~$s,t\in F(U)$ we have~$s\sim t$ if and only if we can represent~$U$ by a union of open~$U_i$ such that for all~$i$ the restrictions of~$s$ and~$t$ to~$U_l$ are equivalent modulo~$R(U_i)$\footnote{TODO herschrijven naar~$\rho$}.
+  %    \item Discover an appropriate definition of ``equivalence relation''~$\sim$ on a presheaf~$F$ so that you can define a presheaf~$F/\sim$ (respectively a sheaf~$F/\sim$ if~$F$ is a sheaf) together with an epimorphism~$F\to F/\sim$ (in the appropriate category) with a universal property.
 
-          We need this condition for the notion of quotient presheaf to hold, without it the restrictions will be broken.
+  %      \begin{solution}
+  %        Let there be an equivalence relation~$R(U)$ on~$F(U)$ for every open set~$U$, we say the collection of~$R(U)$ defines an equivalence relation on~$F$ if for~$s,t\in F(U)$ we have~$s\sim t$ if and only if we can represent~$U$ by a union of open~$U_i$ such that for all~$i$ the restrictions of~$s$ and~$t$ to~$U_l$ are equivalent modulo~$R(U_i)$\footnote{TODO herschrijven naar~$\rho$}.
 
-          TODO universal property
-        \end{solution}
+  %        We need this condition for the notion of quotient presheaf to hold, without it the restrictions will be broken.
 
-      \item Show that each of the categories~$\PCat/X$ and~$\SCat/X$ has all limits and all colimits (in particular all equalisers and coequalisers); that in each category every monomorphism is an equaliser and every epimorphism is a coequaliser; and that every morphism has a unique epimorphism-monomorphism factorisation.
+  %        TODO universal property
+  %      \end{solution}
 
-        \begin{solution}
-          TODO
-        \end{solution}
+  %    \item Show that each of the categories~$\PCat/X$ and~$\SCat/X$ has all limits and all colimits (in particular all equalisers and coequalisers); that in each category every monomorphism is an equaliser and every epimorphism is a coequaliser; and that every morphism has a unique epimorphism-monomorphism factorisation.
 
-      \item Show that for a continuous map~$\phi\colon X\to Y$ there are induced functors~$\SCat/X\overset{\phi_*}{\underset{\phi^*}{\rightleftarrows}}\SCat/Y$ (as in~\S~3.7) with the adjointness property~7.13 and such that~$\phi^*$ preserves all finite limits (analogue of~``$\phi^*$ is left exact'').
+  %      \begin{solution}
+  %        TODO
+  %      \end{solution}
 
-        \begin{solution}
-          TODO
-        \end{solution}
+  %    \item Show that for a continuous map~$\phi\colon X\to Y$ there are induced functors~$\SCat/X\overset{\phi_*}{\underset{\phi^*}{\rightleftarrows}}\SCat/Y$ (as in~\S~3.7) with the adjointness property~7.13 and such that~$\phi^*$ preserves all finite limits (analogue of~``$\phi^*$ is left exact'').
 
-      \item Is there an analogue of extension by zero?
+  %      \begin{solution}
+  %        TODO
+  %      \end{solution}
 
-        \begin{solution}
-          TODO
-        \end{solution}
-    \end{enumerate}
+  %    \item Is there an analogue of extension by zero?
+
+  %      \begin{solution}
+  %        TODO
+  %      \end{solution}
+  %  \end{enumerate}
 
   \item Let~$F,G$ be presheaves of sets on a topological space~$X$. Define a new presheaf~$\uHom(F,G)$ with
     \begin{equation}
@@ -698,7 +700,11 @@
     Show that, if we want the property~\eqref{equation:natural-bijection} to hold, then the definition of~$\uHom$ is forced on us, for presheaves at least.
 
     \begin{solution}
-      TODO
+      Taking~$H=h_U$, now we want
+      \begin{equation}
+        \Hom(h_U,\uHom(F,G))\cong\Hom(h_U\times F,G)
+      \end{equation}
+      to hold. But on all~$V\subseteq U$ this reduces to~$\Hom_{\Sets}(F(U),G(U))$ because in~$\Sets$ taking a product with a singleton is an isomorphism.
     \end{solution}
 
     Reinterpret~\eqref{equation:natural-bijection} as requiring the existence of an evaluation map
@@ -711,14 +717,14 @@
     \begin{enumerate}
       \item\label{subobject-1} there is a natural bijection
         \begin{equation}
-          \Hom(F,\Omega)\cong\text{set of subobjects of~$F$}
+          \Hom(F,\Omega)\cong\{\text{subobjects of~$F$}\}
         \end{equation}
         for any object~$F$;
-      \item\label{subobject-2} $\Omega$ has a special subobject~$\mathrm{1}\overset{t}{\to}\Omega$ such that any morphism~$G\to F$ is the pullback of~$t$ over a unique morphism~$F\to\Omega$ (called the \emph{¢lassifying map} of~$G\to F$).
+      \item\label{subobject-2} $\Omega$ has a special subobject~$\mathrm{1}\overset{t}{\to}\Omega$ such that any morphism~$G\to F$ is the pullback of~$t$ over a unique morphism~$F\to\Omega$ (called the \emph{classifying map} of~$G\to F$).
     \end{enumerate}
 
     \begin{proof}
-      
+      As~$\textbf{1}\to\Omega$ is a monomorphism, we have that the realization of the pullback over~$F\to\Omega$ is again a monomorphism. As pullbacks are unique (up to isomorphism) we find the bijection (and vice versa every map~$g\colon F\to\Omega$ provides a pullback scenario).
     \end{proof}
 
     \begin{solution}
@@ -737,14 +743,18 @@
             \Omega(U)=\left\{ \mathcal{P}\left( F(U) \right) \right\}.
           \end{equation}
 
-        \item[$\SCat/X$] TODO
+        \item[$\SCat/X$] We want to associate a map~$f\colon F\to\Omega$ to every subsheaf~$G$. Define
+          \begin{equation}
+            f(U)\colon F(U)\to\Omega(U):x\mapsto\bigcup\left\{ V\subseteq X\,\text{open}\,|\,\rho^U_V(x)\in G(V) \right\}.
+          \end{equation}
+          This defines a bijection between morphisms from~$F$ to~$\Omega$ and subobjects of~$F$ as the map exactly describes how a subobject is constructed, giving for each section over~$U$ how much it is a subobject.
       \end{description}
     \end{solution}
 
     Compare the situation in~$\Sets=\SCat/X$ for~$X$ a one-point space, where~$\Omega$ is a two-point set and the classifying map is the characteristic map of a subset.
     
     \begin{solution}
-      TODO
+      Now~$t\colon\left\{ 0 \right\}\to\left\{ 0,1 \right\}$, the classifying map is the characteristic function and~$G$ is a subobject of~$F$ if and only if it is a subset of~$F(X)\cong F$. Saying the classifying map is the characteristic function is odd, as the bijection found concerns the characteristic functions from~$F$ to~$\left\{ 0,1 \right\}$, hence \emph{they} define the subsets. The pullback is just the monomorphism.
     \end{solution}
 
   \item Since any category of presheaves is a functor category, we can define it for categories other than those of open sets of a topological space. For~$\mathcal{C}$ any category, let~$\PCat/\mathcal{C}$ be the category~$\Sets^{\mathcal{C}^{\opp}}$ of contravariant functors~$\mathcal{C}\to\Sets$ (and natural transformations).
@@ -755,32 +765,51 @@
       As~$F\in\PCat/G$ is a contravariant functor~$G\to\Sets$ and by definition of the category of a group~$\Ob(G)=\left\{ \cdot_G \right\}$, we have~$F(\cdot_G)$ a set. As all endomorphisms defined on~$\cdot_G$ by~$G$ are invertible ($G$ a group, not just a monoid) we have~$F(\End(\cdot_G))=\Aut\left( F(\cdot_G) \right)$, \ie, all bijections or permutations on~$F(\cdot_G)$. Now every~$g\in G$ defines an (invertible) action on the set~$F(\cdot_G)$, in which~$x\in F(\cdot_G)$ is mapped to~$F(\cdot_G)(x)$.
     \end{solution}
 
-  \item If~$\mathcal{A}$ and~$\mathcal{B}$ are abelian categories, a functor~$F\colon\mathcal{A}\to\mathcal{B}$ is called \emph{half exact} if and only if whenever~$0\to P\to Q\to R\to 0$ is exact in~$\mathcal{A}$, $F(P)\to F(Q)\to F(R)$ is exact in~$\mathcal{B}$. $F$ is called \emph{additive} if and only if all the maps~$F\colon\Hom_{\mathcal{A}}(P,Q)\to\Hom_{\mathcal{B}}(F(P),F(Q))$ are abelian group homomorphisms.
+    \addtocounter{enumi}{2}
 
-    Consider the conditions
+  %\item If~$\mathcal{A}$ and~$\mathcal{B}$ are abelian categories, a functor~$F\colon\mathcal{A}\to\mathcal{B}$ is called \emph{half exact} if and only if whenever~$0\to P\to Q\to R\to 0$ is exact in~$\mathcal{A}$, $F(P)\to F(Q)\to F(R)$ is exact in~$\mathcal{B}$. $F$ is called \emph{additive} if and only if all the maps~$F\colon\Hom_{\mathcal{A}}(P,Q)\to\Hom_{\mathcal{B}}(F(P),F(Q))$ are abelian group homomorphisms.
+
+  %  Consider the conditions
+  %  \begin{enumerate}
+  %    \item\label{enumerate:additive-1} $F$ is half exact;
+  %    \item\label{enumerate:additive-2} $F$ preserves biproducts;
+  %    \item\label{enumerate:additive-3} $F$ is additive.
+  %  \end{enumerate}
+  %  Show that~$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}\Leftrightarrow\ref{enumerate:additive-3}$.
+
+  %  \begin{solution}
+  %    \begin{description}
+  %      \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
+  %      \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
+  %      \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
+  %    \end{description}
+  %  \end{solution}
+
+  %\item 
+
+  \item Let~$0\to P\to Q\to R\to 0$ be an exact sequence of presheaves of abelian groups over a topological space. Show that
     \begin{enumerate}
-      \item\label{enumerate:additive-1} $F$ is half exact;
-      \item\label{enumerate:additive-2} $F$ preserves biproducts;
-      \item\label{enumerate:additive-3} $F$ is additive.
+      \item if~$Q$ is a sheaf and~$R$ is a monopresheaf, then~$P$ is a sheaf;
+
+        \begin{solution}
+          As~$P$ is a subpresheaf of the sheaf~$Q$ by the exactness it is a monopresheaf using Corollary 3.7.
+
+          For the glueing condition: we can glue a section~$s$ in~$Q(U)$. Now the~$(s_\lambda)_\lambda$ are mapped to~$0$ in~$R(U_\lambda)$ and by the monopresheaf condition with~$\overline{s}$ the image of~$s$ in~$R(U)$ and~$s'=0$, we find~$\overline{s}=0$, hence~$s\in P(U)$ because it is an element of the kernel of the quotient map.
+        \end{solution}
+
+      \item if~$P$ is a sheaf and~$Q$ is a monopresheaf, then~$R$ is a monopresheaf.
+
+        \begin{solution}
+          Take~$s\in R(U)$ and~$s'=0$ as in the definition of a monopresheaf. By the exactness we find in~$Q(U_\lambda)$ that the cosets of~$\rho^U_{U_\lambda}(s)$ and~$0$ are equal by lifting the quotient. Hence~$\rho^U_{U_\lambda}(s)+p_\lambda=p_\lambda'$, both~$p_\lambda$ and~$p_\lambda'$ in the embedding of~$P(U_\lambda)$ in~$Q(U_\lambda)$.
+
+          Now we can glue the~$p_\lambda$ and~$p_\lambda'$ together, from which $s=0$ follows by the monopresheaf condition on~$Q$.
+        \end{solution}
     \end{enumerate}
-    Show that~$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}\Leftrightarrow\ref{enumerate:additive-3}$.
-
-    \begin{solution}
-      \begin{description}
-        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$] We show
-        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
-        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
-      \end{description}
-    \end{solution}<++>
-
-  \item 
-
-  \item 
 
   \item A sheaf~$F$ of abelian groups on~$X$ is called \emph{locally free} if and only if each point~$x\in X$ has an open neighbourhood~$U$ in~$X$ such that the sheaf~$F|_U$ is isomorphic to a constant sheaf with typical stalk a free abelian group (of finite rank). Show that if~$X$ is connected, a locally free sheaf has a well-defined rank.
 
     \begin{solution}
-      TODO
+      As it is locally free, the rank of the stalk is extended in a small neighbourhood. But as~$X$ is connected this procedure extends to all of~$X$.
     \end{solution}
 
     Show by example that a locally free sheaf on~$X$ need not be isomorphic to a constant sheaf even if~$X$ is connected, and that~$\phi_*$ does not preserve the property of being locally free.
@@ -794,14 +823,12 @@
         \sections\left( \left\{ 0,1,2 \right\},F \right)&=\mathbb{Z}\oplus\mathbb{Z}
       \end{align}
       with restriction morphisms the projection on the first term. Now take for~$x\in X$ any open~$U\neq X$, then~$F|_U=U_\mathbb{Z}$, but~$F$ is not isomorphic to any constant sheaf.
-      
-
     \end{solution}
 
     Prove however that the inverse image of a locally free sheaf of rank~$n$ is locally free and of the same rank.
 
     \begin{solution}
-      TODO
+      The inverse image~$f^*$ is given locally by the direct limit of open sets containing the inverse image of the continuous map~$f$, but this direct limit consists of data of a locally free sheaf, hence it is locally free.
     \end{solution}
 \end{enumerate}
 
