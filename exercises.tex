@@ -8,8 +8,8 @@
     set xrange #3;
     set yrange #4;
     set view 0,0;
-    set isosample 1000,1000;
-    %set isosample 10,10;
+    %set isosample 1000,1000;
+    set isosample 10,10;
     set size square;
     set cont base;
     %set cntrparam levels incre 0,0.1,0;
@@ -22,7 +22,7 @@
 
 \begin{document}
 \selectlanguage{english}
-\title{\textls[20]{Solutions to Tennison}}
+\title{\textls[20]{Solutions to some of the exercises from Tennison's Sheaf Theory}}
 \author{
   Pieter Belmans
 }
@@ -30,12 +30,14 @@
 
 \tableofcontents*
 
-\chapter{Solutions to the exercises at the end of Chapter 1}
+\chapter{Exercises at the end of Chapter 1}
 \begin{enumerate}
   \item Prove that the~$\varinjlim$ of the direct systems of the examples is~$F(\emptyset)$ in each case. Generalise.
 
     \begin{solution}
       The direct system of a topology corresponds to a complete lattice, hence there is a minimum and a maximum: $\emptyset$ and~$X$. The direct limit now corresponds to `the object that goes to the right of everything' but in this case,~$\emptyset$ is on the right over everything, therefore, the direct limit is given by~$F(\emptyset)$.
+
+      This holds for every direct limit: if there is a \emph{single} object in the direct system that goes to the right of entire system it corresponds to the limit.
     \end{solution}
 
   \item Prove directly from the definitions that if~$U$ is a direct limit of a direct system~$(U_\alpha)_{\alpha\in\Lambda}$ of sets, then~$U=\bigcup_{\alpha\in\Lambda}\Image(U_\alpha\rightarrow U)$.
@@ -43,7 +45,7 @@
     \begin{solution}
       The~$\rho_{\alpha,\beta}$ in the definition of a target are injective maps. Now the set~$\coprod_{\alpha\in\Lambda}U_\alpha$ is a possible target, with~$\sigma_\alpha$ mapping an element to all positions in the disjoint union such that it is contained in the corresponding set~$U_\gamma$.
 
-      By the definition of the direct limit, there must be a unique~$f$ to this target, making the triangle commute. But as I'm writing this, it feels like a reformulation of Theorem~3.10.
+      By the definition of the direct limit, there must be a unique~$f$ to this target, making the triangle commute.
     \end{solution}
 
   \item
@@ -63,7 +65,7 @@
       \item Can you obtain~$\mathbb{Z}$ as a direct limit of finite abelian groups?
 
         \begin{solution}
-          No, only torsion groups are obtainable. As finite abelian groups are all isomorphic to products of~$\mathbb{Z}/p\mathbb{Z}$ and we'll be taking a quotient from a direct sum, all elements will keep their finite order.
+          No, only torsion groups are obtainable. As finite abelian groups are all isomorphic to direct sums of~$\mathbb{Z}/p^k\mathbb{Z}$ and we'll be taking a quotient from a direct sum, all elements will keep their finite order.
         \end{solution}
     \end{enumerate}
 
@@ -134,6 +136,8 @@
   \item The notions of target and direct limit can be formulated without the restriction (a) of Definitions~3.1 and~3.11. What difference does this make to the constructions? Find a system of abelian groups (in this generalised sense) with direct limit~$A\oplus B$ without having this abelian group appear in the system. Justify Remark~3.21.
 
     \begin{solution}
+      Just taking a quotient won't work, there are several components in the generalised direct system that must be handled appropriately.
+
       Take~$X\colonequals]0,1[\cup]1,2[$ and the Euclidean topology with~$X$ removed from the topology. Now the direct system doesn't satisfy the conditions, but by taking a direct system on~$]0,1[$ that produces~$A$ as its direct limit (in the former sense) and likewise on~$]1,2[$ one that produces~$B$ we obtain a system of abelian groups in the generalised sense that produces~$A\oplus B$.
     \end{solution}
 
@@ -173,7 +177,7 @@
   \item What are the stalks of the presheaf~$P_2$ of~2.E?
 
     \begin{solution}
-      We have~$(P_2)_{x_0}=\mathbb{Z}$ as every open subset~$U$ containing~$x_0$ has~$P_2(U)=\mathbb{Z}$, with~$\rho_{\alpha,\beta}=\identity_{\mathbb{Z}}$ in the direct system.
+      We have~$(P_2)_{x_0}=\mathbb{Z}$ as every open subset~$U$ containing~$x_0$ will have~$P_2(U)=\mathbb{Z}$, with~$\rho_{\alpha,\beta}=\identity_{\mathbb{Z}}$ in the direct system.
 
       For~$(P_2)_{x}$ with~$x\neq x_0$ we get~$\left\{ 0 \right\}$, the trivial group. We have~$|x-x_0|=\epsilon>0$, so for the open set~$B(x,\epsilon)\cap[0,1]$ the presheaf gives~$\left\{ 0 \right\}$, all values of the presheaf from there on are the same trivial group.
     \end{solution}
@@ -186,15 +190,14 @@
     If you cannot, prove that it is impossible. Compare with~4(b).
 
     \begin{solution}
-      An interesting case with non-abelian groups would be to take the space~$X=[0,1]\cap\mathbb{Q}$ and assign to an open subset~$U$ the permutation on its elements. The direct limit is now the permutation on a single element, hence the trivial group.
-
-      This is impossible, exactly by~4(b). We'd need restriction maps restricting everything to zero, but by the sheaf conditions this is impossible.
+      This is impossible, exactly by~Q4(b). We'd need restriction maps restricting everything to zero, but by the sheaf conditions this is impossible.
+      %An interesting case with non-abelian groups would be to take the space~$X=[0,1]\cap\mathbb{Q}$ and assign to an open subset~$U$ the permutation on its elements. The direct limit is now the permutation on a single element, hence the trivial group.
     \end{solution}
 \end{enumerate}
 
 \clearpage
 
-\chapter{Solutions to the exercises in Chapter 2}
+\chapter{Exercises in Chapter 2}
 \begin{exercise}[1.9]
   Show that if~$G$ is an abelian sheaf, then~$G(\emptyset)=\left\{ 0 \right\}$, the trivial group.
 
@@ -272,7 +275,7 @@
 
 \clearpage
 
-\chapter{Solutions to the exercises at the end of Chapter 2}
+\chapter{Exercises at the end of Chapter 2}
 \begin{enumerate}
   \item Let~$I=[0,1]\hookrightarrow\mathbb{R}$. Show that there is a unique (up to isomorphism) sheaf~$F$ on~$I$ with stalks: $F_0=F_1=\mathbb{Z}$, $F_x=\left\{ 0 \right\}$ if~$x\in I\setminus\left\{ 0,1 \right\}$.
 
@@ -335,7 +338,7 @@
 
   \item\label{exercise:2-4} Let~$F$ be a sheaf on a space~$X$ with sheaf space~$\ShfSpace(F)\overset{p}{\rightarrow} X$, and let~$A$ be a subspace of~$X$. We ca define the set (or abelian group) of sections of~$F$ over~$A$ by
     \begin{align}
-      \sections(A,F)&=\sections\left( A,\Shf(F) \right) \\
+      \sections(A,F)&=\sections\left( A,\ShfSpace F \right) \\
       &=\left\{ \text{sections of the continuous map $p^{-1}(A)\overset{p}{\rightarrow}A$} \right\}.
     \end{align}
     Show that we can define~$\sections(A,F)$ in terms of~$F$ alone as~$\sections(A,F)=\varinjlim\sections(U,F)$ where the direct limit is taken over the set of open subsets~$U$ of~$X$ such that~$U\supseteq A$. (Colloquially, this says that a section of~$F$ over~$A$ extends uniquely into a small neighbourhood of~$A$.)
@@ -344,12 +347,12 @@
       A section over~$A$ is a section for~$p\colon p^{-1}(A)\to A$, but continuity is defined in terms of \emph{open sets}, so every section over~$A$ must be a section for some~$U\supseteq A$. By taking the direct limit we identify equal sections.
     \end{solution}
 
-  \item\label{exercise:2-5} Let~$F$ be a sheaf on a space~$X$ and let~$(M_i)_{i\in I}$ be a locally finite covering of~$X$ by closed sets (so that for each~$x\in X$, $\left\{ i\in I\,|\,x\in M_i \right\}$ is finite). In the notation of~\ref{exercise:2-4}, suppose we are given a family~$(s_i)_{i\in I}$ with~$\forall i\in I\colon s_i\in\sections(M_i,F)$ and~$\forall i,j\in I\colon s_i=s_j$ on~$M_i\cap M_j$.
+  \item\label{exercise:2-5} Let~$F$ be a sheaf on a space~$X$ and let~$(M_i)_{i\in I}$ be a locally finite covering of~$X$ by closed sets (so that for each~$x\in X$, $\left\{ i\in I\,|\,x\in M_i \right\}$ is finite). In the notation of~Q\ref{exercise:2-4}, suppose we are given a family~$(s_i)_{i\in I}$ with~$\forall i\in I\colon s_i\in\sections(M_i,F)$ and~$\forall i,j\in I\colon s_i=s_j$ on~$M_i\cap M_j$.
 
     Show that there is a unique~$s\in\sections(X,F)$ with~$\forall i\in I\colon s=s_i$ on~$M_i$.
 
     \begin{solution}
-      By the previous exercise all sections on a closed~$M_i$ are lifted uniquely to a small (open) neigbhourhood. We can apply the necessary conditions on these sets and restrict.
+      By the previous exercise all sections on a closed~$M_i$ are lifted uniquely to a small (open) neighbourhood and we'll take a finite intersection of opens. Now we can apply the glueing condition for sheaves and find a global sections.
     \end{solution}
 
   \item Let~$K$ be any infinite field and~$L=K(t)$ a simple transcendental extension. Let~$X$ be the topological space obtained by giving~$K$ the topology whose closed sets are the finite subsets of~$K$.
@@ -409,7 +412,7 @@
 
 \clearpage
 
-\chapter{Solutions to the exercises in Chapter 3}
+\chapter{Exercises in Chapter 3}
 
 \begin{exercise}[1.3]
   Show that identities are unique.
@@ -454,14 +457,87 @@
   \end{solution}
 \end{exercise}
 
+\begin{exercise}[4.2]
+  If~$f\in\Hom(F,G)$ then~$\PCok(f)$ has the universal property:
+  \begin{quote}
+    If~$H$ is a presheaf and~$g\in\Hom(G,H)$ is such that~$R\overset{f}{\to}G\overset{g}{\to}H=0$ then~$g$ factors uniquely as
+    \begin{equation}
+	    \begin{tikzpicture}[baseline=(current bounding box.center)]
+        \matrix (m) [matrix of math nodes, row sep=3em, column sep=2.5em, text height=1.5ex, text depth=0.25ex] {
+          G & \\
+          \PCok(f) & H \\
+        };
+        \path[->] (m-1-1) edge node [auto] {g} (m-2-2);
+        \path[->] (m-2-1) edge (m-2-2);
+        \path[->,dashed] (m-1-1) edge (m-2-1);
+      \end{tikzpicture}
+    \end{equation}
+  \end{quote}
+
+  \begin{solution}
+    Analoguous to Exercise 3.2.
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}[6.2]
+  Formulate the universal property that you would like a concept of ``image'' to satisfy and verify that~$\PIm$ and~$\SIm$ do in the categories~$\PCat/X$ and~$\SCat/X$.
+
+  \begin{solution}
+    Given a morphism~$f\colon F\to G$, we want the image of~$f$ to be the object~$I$ such that~$h\colon I\to G$ is a monomorphism satisfying:
+    \begin{enumerate}
+      \item there exists a morphism~$g\colon F\to I$ with $f=h\circ g$;
+      \item any other object~$I'$ with morphism~$f'\colon X\to I'$ and corresponding monomorphism~$h'\colon I'\to G$ such that~$f=i'\circ f'$ (\ie, it tries to act like our image) we have a unique morphism~$m\colon I\to I'$ with~$f'=m\circ g$ and~$h=h'\circ m$.
+    \end{enumerate}
+
+    By Theorem~4.13 we have the monomorphism and by the definition of the respective cokernels we know that the images of~$f$ are mapped to zero, so the kernel of~$G\to\PCok f$ or~$G\to \SCok f$ is exactly the image we are looking for.
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}[6.3]
+  Check that~$\PIm(f)$ is a presheaf whose abelian group of sections over each open~$U$ is the image of~$f(U)$, while~$\SIm(f)$ is a sheaf whose stalk at each~$x\in X$ is the image of~$f_x$.
+
+  \begin{solution}
+    By the same reasoning as Theorems 4.7 and 4.8 using Proposition 3.9.
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}[6.8]
+  Prove that~$T$ is exact if and only if~$T$ preserves all exact sequences.
+
+  \begin{solution}
+    Every general exact sequence can be reduced to a short exact sequence which can be embedded in the five-term sequence from the definition.
+  \end{solution}
+\end{exercise}
+
+\begin{exercise}[7.4]
+  Verify the functorial properties of~$\phi_\ast$ and~$-_\ast$.
+
+  \begin{solution}
+    We have~$\phi_\ast(\identity_F)=\identity_{\phi_\ast F}$ because by definition of the direct image of a morphism
+    \begin{equation}
+      \phi_\ast\left( \identity_F \right)(U) =\identity_F\left( \phi^{-1}(U) \right)=\identity_{\phi_\ast F}(U)
+    \end{equation}
+    and~$\identity_\ast=\identity$ by the definition of the direct image (pre)sheaf.
+
+    Now take~$F\overset{f}{\to}G\overset{g}{\to}H$ (pre)sheaf morphisms on continuous maps~$X\overset{\phi^1}{\to}Y\overset{\phi^2}{\to}Z$. We now have
+    \begin{align}
+      \left( \phi^2\circ\phi^1 \right)_\ast\left( g\circ f \right)(U)&=\left( g\circ f \right)\left( \phi^2\circ\phi^1 \right)^{-1}(U) \\
+      &=\left( g\circ f\circ{\phi^1}^{-1}\circ{\phi^2}^{-1} \right)(U) \\
+      &=\left( f\circ{\phi^1}^{-1} \right)\left( \phi^2_\ast g(U) \right) \\
+      &=\left( \phi_\ast^2g\circ\phi^1_\ast f \right)(U)
+    \end{align}
+    by peeling of the definition of~$\phi_\ast f$.
+  \end{solution}
+\end{exercise}
+
 \clearpage
 
-\chapter{Solutions to the exercises at the end of Chapter 3}
+\chapter{Exercises at the end of Chapter 3}
 \begin{enumerate}
   \item Let~$P$ be the category of pointed sets, whose objects are the pairs~$(A,a)$ with~$a\in A\in\Ob(\Sets)$, and whose morphisms $(A,a)\to(B,b)$ are the maps of sets~$f\colon A\to B$ such that~$f(a)=b$. Show that~$P$ is a category with a zero object, kernels and cokernels, but in which not every epimorphism is a cokernel.
 
     \begin{solution}
-      Every singleton set~$(\left\{ x \right\},x)$ is a zero object. The initial object~$\emptyset$ from~$\Sets$ is now changed to~$(\left( x \right),x)$ as every morphism needs to map the base point. The terminal object~$\left\{ x \right\}$ in~$\Sets$ remains unchanged as it allows for exactly one morphism (which preserves the base point).
+      Every singleton set~$(\left\{ x \right\},x)$ is a zero object. The initial object~$\emptyset$ from~$\Sets$ is now changed to~$(\left\{ x \right\},x)$ as every morphism needs to map the base point and hence a unique map from our initial object is defined. The terminal object~$\left\{ x \right\}$ in~$\Sets$ remains unchanged as it allows for exactly one morphism (which preserves the base point).
 
       For kernels and cokernels we need a zero morphism, which in this case is the projection on the base point. For a map~$f\colon(A,a)\to(B,b)$ we have that~$\Ker(f)=(f^{-1}(b),a)$ and~$\Coker(f)=(f(A),b)$.
 
@@ -693,8 +769,8 @@
       \begin{description}
         \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$] We show
         \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
-        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]<++>
-      \end{description}<++>
+        \item[$\ref{enumerate:additive-1}\Rightarrow\ref{enumerate:additive-2}$]
+      \end{description}
     \end{solution}<++>
 
   \item 
@@ -729,13 +805,20 @@
     \end{solution}
 \end{enumerate}
 
-\chapter{Solutions to the exercises at the end of Chapter 4}
+\chapter{Exercises at the end of Chapter 4}
 \begin{enumerate}
   \setcounter{enumi}{2}
   \item Draw a picture of~$\Spec\mathbb{Z}[t]$.
 
     \begin{solution}
-      TODO
+      In Figure~\ref{figure:treasure} my own \LaTeX\ version of Mumford's $\Spec\mathbb{Z}[t]$ is given.
+
+      \begin{figure}[p]
+        \centering
+        \input{treasure.tikz}
+        \caption{Mumford's treasure map}
+        \label{figure:treasure}
+      \end{figure}
     \end{solution}
 
   \item Show that for any ring~$R$, $\Spec R$ is compact.
@@ -756,6 +839,8 @@
       is a manifold (topological, differentiable or analytic as you wish), whereas that given by the equation~$y^2=x^2(x+1)$ is not.
 
       \begin{solution}
+        In Figure~\ref{figure:curves} an impression in~$\mathbb{R}^2$ is given. In the first case one component is homeomorphic (or diffeomorphic as you wish) to a circle while the other is homeomorphic to~$\mathbb{R}$. In the second case though, the self-intersection in the origin creates a problem: there is no correct definition of the tangent. Or if you are looking for a topological argument: removing the origin creates three components, which is impossible for a manifold, given its local Euclidean structure.
+
         \begin{figure}[p]
           \subbottom[$y^2=(x+1)x(x-1)$]{
             \begin{tikzpicture}[xscale=.75,yscale=.75]

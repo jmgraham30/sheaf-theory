@@ -13,6 +13,8 @@
 \usepackage{rotating}
 \usepackage{tikz}
 \usepackage{xspace}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
 
 % must come after hyperref
 \usepackage[capitalise,dutch]{cleveref}
@@ -72,7 +74,7 @@
 \crefname{remark}{Opmerking}{Opmerkingen}
 
 \newtheorem*{exercise}{Exercise}
-\newenvironment{solution}[1][\textbf{Solution}\hspace{1em}]{#1}{\hfill\qed}
+\newenvironment{solution}[1][\textbf{Solution}\hspace{.5em}]{#1}{\hfill\qed}
 
 % http://tug.org/pracjourn/2006-3/robertson/robertson.pdf
 \newcommand\foreign[1]{\emph{#1}}
@@ -119,5 +121,9 @@
 \DeclareMathOperator\Ker{Ker}
 \DeclareMathOperator\Ob{Ob}
 \DeclareMathOperator\opp{op}
+\DeclareMathOperator\PCok{PCok}
+\DeclareMathOperator\PIm{PIm}
+\DeclareMathOperator\SCok{SCok}
+\DeclareMathOperator\SIm{SIm}
 \DeclareMathOperator\Spec{Spec}
 \DeclareMathOperator\Tor{Tor}
