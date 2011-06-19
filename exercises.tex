@@ -8,8 +8,8 @@
     set xrange #3;
     set yrange #4;
     set view 0,0;
-    %set isosample 1000,1000;
-    set isosample 10,10;
+    set isosample 1000,1000;
+    %set isosample 10,10;
     set size square;
     set cont base;
     %set cntrparam levels incre 0,0.1,0;
@@ -539,9 +539,9 @@
     \begin{solution}
       Every singleton set~$(\left\{ x \right\},x)$ is a zero object. The initial object~$\emptyset$ from~$\Sets$ is now changed to~$(\left\{ x \right\},x)$ as every morphism needs to map the base point and hence a unique map from our initial object is defined. The terminal object~$\left\{ x \right\}$ in~$\Sets$ remains unchanged as it allows for exactly one morphism (which preserves the base point).
 
-      For kernels and cokernels we need a zero morphism, which in this case is the projection on the base point. For a map~$f\colon(A,a)\to(B,b)$ we have that~$\Ker(f)=(f^{-1}(b),a)$ and~$\Coker(f)=(f(A),b)$.
+      For kernels and cokernels we need a zero morphism, which in this case is the projection on the base point. For a map~$f\colon(A,a)\to(B,b)$ we have that~$\Ker(f)=(f^{-1}(b),a)$ and~$\Coker(f)=((B\setminus f(A))\cup\left\{ b \right\},b)$.
 
-      TODO
+      The fact that not every epimorphism is a cokernel is due to split epimorphisms being surjective, while the cokernel removes the image except for the base point.
     \end{solution}
 
   \item For~$X$ any topological space, show that the following presheaves of sets over~$X$ are in facts sheaves:
@@ -898,14 +898,10 @@
       \end{equation}
       is an isomorphism of ringed spaces (and so of affine schemes).
 
-      \begin{solution}
-        TODO
-      \end{solution}
-
       Putting~$f(x,y)=y^2-x^3+x$ or~$y^2-x^3-x^2$ we get the algebraic analogues of the curves of part (a). What is different about the two cases?
 
       \begin{solution}
-        TODO
+        The local ring in the origin is different: it shows the occurence of two tangent lines. It is a singular point.
       \end{solution}
 
       Other curves for your amusement:
@@ -935,8 +931,10 @@
             \end{tikzpicture}
           }
           \caption{Plots}
-          \label{figure:curves}
+          \label{figure:curves-2}
         \end{figure}
+
+        In Figure~\ref{figure:curves-2} the embedding in~$\mathbb{R}^2$ is given. We see just one component containing nothing but regular points while the curve~$y^2-x^3$ has a cusp: there is a multiple tangent in the origin.
       \end{solution}
   \end{description}
 \end{enumerate}
